@@ -1647,9 +1647,8 @@ body::after {
 }
 
 .logos {
-  padding-top: 100px;
   margin: auto;
-  padding: 0rem;
+  padding: 1.375rem 0rem;
   background: rgba(217, 217, 217, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4487,14 +4486,6 @@ button.swiper-pagination-bullet {
     font-size: 1rem;
   }
 
-  .feedbacks {
-    padding-top: 4.3125rem;
-  }
-
-  .feedbacks {
-    padding-bottom: 6.4375rem;
-  }
-
   .feedbacks__item h4 {
     margin-bottom: 1.6875rem;
   }
@@ -4817,6 +4808,14 @@ button.swiper-pagination-bullet {
     gap: 4.375rem;
   }
 
+  .feedbacks {
+    padding-top: 4.3125rem;
+  }
+
+  .feedbacks {
+    padding-bottom: 6.4375rem;
+  }
+
   .feedbacks__container h2 {
     font-size: 1.875rem;
   }
@@ -5063,8 +5062,8 @@ button.swiper-pagination-bullet {
     font-size: 0.75rem;
   }
 
-  .musings__right p {
-    margin-bottom: 1.375rem;
+  .musings__right .musings__bottom {
+    margin-top: 1.375rem;
   }
 
   .musings__right .musings__date {
@@ -5263,14 +5262,6 @@ button.swiper-pagination-bullet {
 
   .designer__count sup {
     font-size: 0.75rem;
-  }
-
-  .feedbacks {
-    padding-top: 2.8125rem;
-  }
-
-  .feedbacks {
-    padding-bottom: 3.4375rem;
   }
 
   .feedbacks__item h4 {
@@ -5981,6 +5972,10 @@ button.swiper-pagination-bullet {
             flex: 0 1 auto;
   }
 
+  .logos {
+    padding: 0.75rem 0rem;
+  }
+
   .feedbacks__container h2 {
     text-align: center;
   }
@@ -6002,6 +5997,11 @@ button.swiper-pagination-bullet {
     font-size: 0.625rem;
     max-width: 15.9375rem;
     margin: 0 auto;
+  }
+
+  .feedbacks {
+    padding-top: 2.8125rem;
+    padding-bottom: 3.4375rem;
   }
 
   .reviews__decor {
@@ -6148,6 +6148,20 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+
+  .process__slider {
+    position: relative;
+  }
+
+  .process__slider::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(168, 168, 168, 0.5);
   }
 
   .process__slider {
@@ -6320,11 +6334,11 @@ button.swiper-pagination-bullet {
 
   .musings__right p {
     font-size: 0.5rem;
-    margin-bottom: 0.75rem;
   }
 
   .musings__right .musings__bottom {
     gap: 0.875rem;
+    margin-top: 0.75rem;
   }
 
   .musings__right .musings__date {
@@ -7610,15 +7624,15 @@ button.swiper-pagination-bullet {
     }
 }
 
-@supports (margin-bottom: clamp( 0.75rem , 0.0357541442rem  +  1.4880509509vw , 1.375rem )) {
-    .musings__right p {
-      margin-bottom: clamp( 0.75rem , 0.0357541442rem  +  1.4880509509vw , 1.375rem );
+@supports (margin-top: clamp( 0.75rem , 0.0357541442rem  +  1.4880509509vw , 1.375rem )) {
+    .musings__right .musings__bottom {
+      margin-top: clamp( 0.75rem , 0.0357541442rem  +  1.4880509509vw , 1.375rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 0.75rem , 0.0357541442rem  +  1.4880509509vw , 1.375rem )) {
-    .musings__right p {
-      margin-bottom: calc(0.75rem + 0.625 * (100vw - 47.99875rem) / 42.00125);
+@supports not (margin-top: clamp( 0.75rem , 0.0357541442rem  +  1.4880509509vw , 1.375rem )) {
+    .musings__right .musings__bottom {
+      margin-top: calc(0.75rem + 0.625 * (100vw - 47.99875rem) / 42.00125);
     }
 }
 
@@ -8160,30 +8174,6 @@ button.swiper-pagination-bullet {
     }
 }
 
-@supports (padding-top: clamp( 2.8125rem , 2.2963709677rem  +  2.5806451613vw , 4.3125rem )) {
-    .feedbacks {
-      padding-top: clamp( 2.8125rem , 2.2963709677rem  +  2.5806451613vw , 4.3125rem );
-    }
-}
-
-@supports not (padding-top: clamp( 2.8125rem , 2.2963709677rem  +  2.5806451613vw , 4.3125rem )) {
-    .feedbacks {
-      padding-top: calc(2.8125rem + 1.5 * (100vw - 20rem) / 58.125);
-    }
-}
-
-@supports (padding-bottom: clamp( 3.4375rem , 2.4052419355rem  +  5.1612903226vw , 6.4375rem )) {
-    .feedbacks {
-      padding-bottom: clamp( 3.4375rem , 2.4052419355rem  +  5.1612903226vw , 6.4375rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 3.4375rem , 2.4052419355rem  +  5.1612903226vw , 6.4375rem )) {
-    .feedbacks {
-      padding-bottom: calc(3.4375rem + 3 * (100vw - 20rem) / 58.125);
-    }
-}
-
 @supports (margin-bottom: clamp( 0.875rem , 0.5954301075rem  +  1.3978494624vw , 1.6875rem )) {
     .feedbacks__item h4 {
       margin-bottom: clamp( 0.875rem , 0.5954301075rem  +  1.3978494624vw , 1.6875rem );
@@ -8716,6 +8706,30 @@ button.swiper-pagination-bullet {
 }
 
 @media (min-width: 48.06125em) and (max-width: 90em) {
+@supports (padding-top: clamp( 2.8125rem , 1.0935199398rem  +  3.5766445113vw , 4.3125rem )) {
+    .feedbacks {
+      padding-top: clamp( 2.8125rem , 1.0935199398rem  +  3.5766445113vw , 4.3125rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.8125rem , 1.0935199398rem  +  3.5766445113vw , 4.3125rem )) {
+    .feedbacks {
+      padding-top: calc(2.8125rem + 1.5 * (100vw - 48.06125rem) / 41.93875);
+    }
+}
+
+@supports (padding-bottom: clamp( 3.4375rem , -0.0004601204rem  +  7.1532890227vw , 6.4375rem )) {
+    .feedbacks {
+      padding-bottom: clamp( 3.4375rem , -0.0004601204rem  +  7.1532890227vw , 6.4375rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 3.4375rem , -0.0004601204rem  +  7.1532890227vw , 6.4375rem )) {
+    .feedbacks {
+      padding-bottom: calc(3.4375rem + 3 * (100vw - 48.06125rem) / 41.93875);
+    }
+}
+
 @supports (font-size: clamp( 1.125rem , 0.2655099699rem  +  1.7883222557vw , 1.875rem )) {
     .feedbacks__container h2 {
       font-size: clamp( 1.125rem , 0.2655099699rem  +  1.7883222557vw , 1.875rem );
