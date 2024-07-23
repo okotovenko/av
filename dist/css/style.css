@@ -6348,7 +6348,7 @@ button.swiper-pagination-bullet {
 
   .musings__right .musings__day::before {
     right: -0.875rem;
-    top: 0.3125rem;
+    top: 0.25rem;
   }
 
   .musings__right .musings__link {
