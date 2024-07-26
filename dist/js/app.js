@@ -220,39 +220,145 @@
         document.documentElement.classList.remove("menu-open");
     }
     function showMore() {
+        //!
+        //!
         document.addEventListener("DOMContentLoaded", (() => {
             const showMoreBlocks = document.querySelectorAll("[data-showmore]");
             showMoreBlocks.forEach((showMoreBlock => {
-                const showMoreButton = showMoreBlock.querySelector("[data-showmore-button]");
                 const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
-                showMoreContent.dataset.showmoreContentMobile;
-                let itemsToShow = getInitialItemsToShow(showMoreContent);
-                let currentIndex = itemsToShow;
-                updateVisibility(showMoreContent, currentIndex);
-                showMoreButton.addEventListener("click", (() => {
-                    currentIndex += itemsToShow;
-                    updateVisibility(showMoreContent, currentIndex);
-                }));
-                window.addEventListener("resize", (() => {
-                    itemsToShow = getInitialItemsToShow(showMoreContent);
-                    currentIndex = itemsToShow;
-                    updateVisibility(showMoreContent, currentIndex);
-                }));
-                function getInitialItemsToShow(showMoreContent) {
-                    const mobileItems = parseInt(showMoreContent.dataset.showmoreContentMobile) || 2;
-                    const desktopItems = parseInt(showMoreContent.dataset.showmoreContent) || 6;
-                    return window.innerWidth < 768 ? mobileItems : desktopItems;
-                }
-                function updateVisibility(showMoreContent, currentIndex) {
-                    const items = showMoreContent.querySelectorAll("li");
-                    items.forEach(((item, index) => {
-                        if (index < currentIndex) item.classList.add("visible"); else item.classList.remove("visible");
-                    }));
-                    const allItemsVisible = currentIndex >= items.length;
-                    showMoreButton.style.display = allItemsVisible ? "none" : "block";
-                }
+                const hasDataItem = showMoreContent.querySelector("[data-item]");
+                if (!hasDataItem) setupShowMoreForUnsorted(showMoreBlock);
             }));
         }));
+        function setupShowMoreForUnsorted(showMoreBlock) {
+            const showMoreButton = showMoreBlock.querySelector("[data-showmore-button]");
+            const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
+            let itemsToShow = getInitialItemsToShow(showMoreContent);
+            let currentIndex = itemsToShow;
+            updateVisibility(showMoreContent, currentIndex);
+            showMoreButton.addEventListener("click", (() => {
+                currentIndex += itemsToShow;
+                updateVisibility(showMoreContent, currentIndex);
+            }));
+            window.addEventListener("resize", (() => {
+                itemsToShow = getInitialItemsToShow(showMoreContent);
+                currentIndex = itemsToShow;
+                updateVisibility(showMoreContent, currentIndex);
+            }));
+            function getInitialItemsToShow(showMoreContent) {
+                const mobileItems = parseInt(showMoreContent.dataset.showmoreContentMobile) || 6;
+                const desktopItems = parseInt(showMoreContent.dataset.showmoreContent) || 8;
+                return window.innerWidth < 768 ? mobileItems : desktopItems;
+            }
+            function updateVisibility(showMoreContent, currentIndex) {
+                const items = showMoreContent.querySelectorAll("li");
+                items.forEach(((item, index) => {
+                    if (index < currentIndex) item.classList.add("visible"); else item.classList.remove("visible");
+                }));
+                const allItemsVisible = currentIndex >= items.length;
+                showMoreButton.style.display = allItemsVisible ? "none" : "block";
+            }
+        }
+        document.addEventListener("DOMContentLoaded", (() => {
+            setupFiltering();
+            setupShowMoreForSorted();
+            initializePage();
+        }));
+        function setupFiltering() {
+            const filterButtons = document.querySelectorAll(".portfolio-portfolio__button");
+            const items = document.querySelectorAll(".portfolio-portfolio__item");
+            filterButtons.forEach((button => {
+                button.addEventListener("click", (() => {
+                    filterButtons.forEach((btn => btn.classList.remove("active")));
+                    button.classList.add("active");
+                    const filter = button.getAttribute("data-filter");
+                    let visibleCount = 0;
+                    const itemsToShow = getItemsToShow(items[0].parentElement);
+                    items.forEach((item => {
+                        item.classList.remove("visible", "active", "hide");
+                        if (filter === "ALL" || item.getAttribute("data-item") === filter) {
+                            item.classList.add("active");
+                            if (visibleCount < itemsToShow) {
+                                item.classList.add("visible");
+                                visibleCount++;
+                            } else item.classList.add("hide");
+                        } else item.classList.add("hide");
+                    }));
+                    updateShowMoreButtonState(items[0].parentElement, visibleCount);
+                }));
+            }));
+        }
+        function setupShowMoreForSorted() {
+            const showMoreBlocks = document.querySelectorAll("[data-showmore]");
+            showMoreBlocks.forEach((showMoreBlock => {
+                const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
+                const hasDataItem = showMoreContent.querySelector("[data-item]");
+                if (hasDataItem) {
+                    const showMoreButton = showMoreBlock.querySelector("[data-showmore-button]");
+                    showMoreButton.addEventListener("click", (() => {
+                        const items = showMoreContent.querySelectorAll(".portfolio-portfolio__item.hide.active");
+                        let visibleCount = showMoreContent.querySelectorAll(".portfolio-portfolio__item.visible.active").length;
+                        const itemsToShow = getItemsToShow(showMoreContent);
+                        items.forEach(((item, index) => {
+                            if (index < itemsToShow) {
+                                item.classList.add("visible");
+                                item.classList.remove("hide");
+                            }
+                        }));
+                        visibleCount += itemsToShow;
+                        updateShowMoreButtonState(showMoreContent, visibleCount);
+                    }));
+                    initializeShowMore(showMoreContent, showMoreButton);
+                }
+            }));
+        }
+        function getItemsToShow(container) {
+            const mobileItems = parseInt(container.dataset.showmoreContentMobile) || 6;
+            const desktopItems = parseInt(container.dataset.showmoreContent) || 8;
+            return window.innerWidth < 768 ? mobileItems : desktopItems;
+        }
+        function updateShowMoreButtonState(content, visibleCount) {
+            const items = content.querySelectorAll(".portfolio-portfolio__item.active").length;
+            const showMoreButton = content.parentElement.querySelector("[data-showmore-button]");
+            if (visibleCount >= items) showMoreButton.style.display = "none"; else showMoreButton.style.display = "block";
+        }
+        function initializeShowMore(showMoreContent, showMoreButton) {
+            let visibleCount = 0;
+            const itemsToShow = getItemsToShow(showMoreContent);
+            const items = showMoreContent.querySelectorAll(".portfolio-portfolio__item.active");
+            items.forEach(((item, index) => {
+                if (index < itemsToShow) {
+                    item.classList.add("visible");
+                    visibleCount++;
+                } else item.classList.add("hide");
+            }));
+            updateShowMoreButtonState(showMoreContent, visibleCount);
+        }
+        function initializePage() {
+            const initialFilterButton = document.querySelector(".portfolio-portfolio__button.active");
+            if (initialFilterButton) initialFilterButton.click(); else {
+                const items = document.querySelectorAll(".portfolio-portfolio__item");
+                if (items.length === 0) return;
+                let visibleCount = 0;
+                const itemsToShow = getItemsToShow(items[0].parentElement);
+                items.forEach(((item, index) => {
+                    item.classList.remove("visible", "active", "hide");
+                    item.classList.add("active");
+                    if (visibleCount < itemsToShow) {
+                        item.classList.add("visible");
+                        visibleCount++;
+                    } else item.classList.add("hide");
+                }));
+                updateShowMoreButtonState(items[0].parentElement, visibleCount);
+            }
+            const showMoreBlocks = document.querySelectorAll("[data-showmore]");
+            showMoreBlocks.forEach((showMoreBlock => {
+                const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
+                const showMoreButton = showMoreBlock.querySelector("[data-showmore-button]");
+                const hasDataItem = showMoreContent.querySelector("[data-item]");
+                if (hasDataItem) initializeShowMore(showMoreContent, showMoreButton);
+            }));
+        }
     }
     function FLS(message) {
         setTimeout((() => {
@@ -4668,7 +4774,7 @@
     }
     function initSliders() {
         if (document.querySelector(".feedbacks__slider")) new Swiper(".feedbacks__slider", {
-            modules: [ Autoplay ],
+            modules: [ Autoplay, Navigation ],
             observer: true,
             observeParents: true,
             slidesPerView: 3,
@@ -4678,6 +4784,10 @@
             loop: true,
             autoplay: {
                 delay: 5e3
+            },
+            navigation: {
+                prevEl: ".feedbacks-button-prev",
+                nextEl: ".feedbacks-button-next"
             },
             breakpoints: {
                 320: {
@@ -4696,15 +4806,18 @@
             },
             on: {}
         });
-        if (document.querySelector(".services__slider")) {
+        //! Робичий варіант без position: fixed========================================================================== 
+                if (document.querySelector(".services__slider")) {
             const isMobile = window.matchMedia("(max-width: 768px)").matches;
             const direction = isMobile ? "horizontal" : "vertical";
-            new Swiper(".services__slider", {
-                modules: [ Navigation, Mousewheel ],
+            const servicesSection = document.querySelector(".services");
+            const swiper = new Swiper(".services__slider", {
+                modules: [ Navigation, Scrollbar ],
                 direction,
                 slidesPerView: 1,
-                mousewheel: {
-                    invert: false
+                navigation: {
+                    prevEl: ".services-button-prev",
+                    nextEl: ".services-button-next"
                 },
                 scrollbar: {
                     el: ".services-scrollbar",
@@ -4715,18 +4828,46 @@
                 on: {
                     init: function() {
                         updateScrollbar(this);
-                        animateSlides(this);
                     },
                     slideChange: function() {
                         updateScrollbar(this);
-                        animateSlides(this);
                     }
                 }
             });
+            let additionalScrolls = 0;
+            function handleWheelEvent(e) {
+                if (servicesSection.classList.contains("_watcher-view")) {
+                    e.preventDefault();
+                    if (swiper.params.direction === "vertical") if (e.deltaY > 0) if (!swiper.isEnd) swiper.slideNext(); else {
+                        additionalScrolls++;
+                        if (additionalScrolls >= 1) {
+                            servicesSection.classList.remove("_watcher-view");
+                            document.body.classList.remove("no-scroll");
+                            document.removeEventListener("wheel", handleWheelEvent);
+                            servicesSection.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+                        }
+                    } else if (!swiper.isBeginning) swiper.slidePrev(); else {
+                        additionalScrolls++;
+                        if (additionalScrolls >= 1) {
+                            servicesSection.classList.remove("_watcher-view");
+                            document.body.classList.remove("no-scroll");
+                            document.removeEventListener("wheel", handleWheelEvent);
+                            servicesSection.scrollIntoView({
+                                behavior: "smooth",
+                                block: "end"
+                            });
+                        }
+                    } else if (e.deltaY > 0) swiper.slideNext(); else swiper.slidePrev();
+                }
+            }
             function updateScrollbar(swiperInstance) {
+                const scrollbar = document.querySelector(".services-scrollbar");
+                if (!scrollbar) return;
                 const totalSlides = swiperInstance.slides.length;
                 const currentIndex = swiperInstance.activeIndex;
-                const scrollbar = document.querySelector(".services-scrollbar");
                 const scrollbarSize = isMobile ? 50 : 20;
                 if (isMobile) {
                     const scrollbarLeft = currentIndex / (totalSlides - 1) * (swiperInstance.width - scrollbarSize);
@@ -4740,13 +4881,27 @@
                     scrollbar.style.height = `${scrollbarSize}px`;
                 }
             }
-            function animateSlides(swiperInstance) {
-                const slides = swiperInstance.slides;
-                slides.forEach(((slide, index) => {
-                    slide.classList.remove("animate-left", "animate-right");
-                    if (index === swiperInstance.activeIndex) slide.classList.add("animate-active"); else if (index === swiperInstance.activeIndex - 1) slide.classList.add("animate-left"); else if (index === swiperInstance.activeIndex + 1) slide.classList.add("animate-right");
+            const observer = new IntersectionObserver((entries => {
+                entries.forEach((entry => {
+                    if (entry.target === servicesSection) if (entry.isIntersecting) {
+                        servicesSection.classList.add("_watcher-view");
+                        additionalScrolls = 0;
+                        document.body.classList.add("no-scroll");
+                        document.addEventListener("wheel", handleWheelEvent, {
+                            passive: false
+                        });
+                    } else {
+                        servicesSection.classList.remove("_watcher-view");
+                        document.body.classList.remove("no-scroll");
+                        document.removeEventListener("wheel", handleWheelEvent, {
+                            passive: false
+                        });
+                    }
                 }));
-            }
+            }), {
+                threshold: .9
+            });
+            observer.observe(servicesSection);
         }
         function initializeProcessSlider() {
             const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -4790,6 +4945,50 @@
             const isMobile = window.matchMedia("(max-width: 768px)").matches;
             if (isMobile && !document.querySelector(".process__slider").swiper) initializeProcessSlider();
         }));
+        if (document.querySelector(".related-project__slider")) {
+            const swiper = new Swiper(".related-project__slider", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 4,
+                spaceBetween: 15,
+                autoHeight: true,
+                speed: 800,
+                navigation: {
+                    prevEl: ".related-project-prev",
+                    nextEl: ".related-project-next"
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 10
+                    },
+                    992: {
+                        slidesPerView: 4
+                    }
+                },
+                on: {
+                    slideChange: function() {
+                        handleLastVisibleSlide(swiper);
+                    },
+                    resize: function() {
+                        handleLastVisibleSlide(swiper);
+                    }
+                }
+            });
+            function handleLastVisibleSlide(swiperInstance) {
+                const slides = document.querySelectorAll(".related-project__slide");
+                const lastVisibleSlideIndex = swiperInstance.activeIndex + swiperInstance.params.slidesPerView - 1;
+                slides.forEach((slide => slide.classList.remove("last-visible")));
+                if (lastVisibleSlideIndex < slides.length) slides[lastVisibleSlideIndex].classList.add("last-visible");
+                if (swiperInstance.isEnd) slides[lastVisibleSlideIndex].classList.add("actual-last-visible");
+            }
+            handleLastVisibleSlide(swiper);
+        }
     }
     function initSlidersScroll() {
         let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
@@ -4820,6 +5019,10 @@
         initSliders();
         initSlidersScroll();
     }));
+    //! CSS для компенсации ширины полосы прокрутки
+        const style = document.createElement("style");
+    style.innerHTML = `\n\t.no-scroll {\n\t\toverflow: hidden;\n\t\tpadding-right: ${window.innerWidth - document.documentElement.clientWidth}px;\n\t}\n`;
+    document.head.appendChild(style);
     function isObject_isObject(value) {
         var type = typeof value;
         return value != null && (type == "object" || type == "function");
@@ -5797,6 +6000,103 @@
     }
     window.addEventListener("load", initializeSimpleBar);
     window.addEventListener("resize", initializeSimpleBar);
+    class ScrollWatcher {
+        constructor(props) {
+            let defaultConfig = {
+                logging: true
+            };
+            this.config = Object.assign(defaultConfig, props);
+            this.observer;
+            !document.documentElement.classList.contains("watcher") ? this.scrollWatcherRun() : null;
+        }
+        scrollWatcherUpdate() {
+            this.scrollWatcherRun();
+        }
+        scrollWatcherRun() {
+            document.documentElement.classList.add("watcher");
+            this.scrollWatcherConstructor(document.querySelectorAll("[data-watch]"));
+        }
+        scrollWatcherConstructor(items) {
+            if (items.length) {
+                this.scrollWatcherLogging(`Проснулся, слежу за объектами (${items.length})...`);
+                let uniqParams = this.uniqArray(Array.from(items).map((item => `${item.dataset.watchRoot ? item.dataset.watchRoot : null}|${item.dataset.watchMargin ? item.dataset.watchMargin : "0px"}|${item.dataset.watchThreshold ? item.dataset.watchThreshold : 0}`)));
+                uniqParams.forEach((uniqParam => {
+                    let uniqParamArray = uniqParam.split("|");
+                    let paramsWatch = {
+                        root: uniqParamArray[0],
+                        margin: uniqParamArray[1],
+                        threshold: uniqParamArray[2]
+                    };
+                    let groupItems = Array.from(items).filter((item => {
+                        let watchRoot = item.dataset.watchRoot ? item.dataset.watchRoot : null;
+                        let watchMargin = item.dataset.watchMargin ? item.dataset.watchMargin : "0px";
+                        let watchThreshold = item.dataset.watchThreshold ? item.dataset.watchThreshold : 0;
+                        return String(watchRoot) === paramsWatch.root && String(watchMargin) === paramsWatch.margin && String(watchThreshold) === paramsWatch.threshold;
+                    }));
+                    let configWatcher = this.getScrollWatcherConfig(paramsWatch);
+                    this.scrollWatcherInit(groupItems, configWatcher);
+                }));
+            } else this.scrollWatcherLogging("Сплю, нет объектов для слежения. ZzzZZzz");
+        }
+        getScrollWatcherConfig(paramsWatch) {
+            let configWatcher = {};
+            if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if (paramsWatch.root !== "null") this.scrollWatcherLogging(`Эмм... родительского объекта ${paramsWatch.root} нет на странице`);
+            configWatcher.rootMargin = paramsWatch.margin;
+            if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
+                this.scrollWatcherLogging(`Ой ой, настройку data-watch-margin нужно задавать в PX или %`);
+                return;
+            }
+            if (paramsWatch.threshold === "prx") {
+                paramsWatch.threshold = [];
+                for (let i = 0; i <= 1; i += .005) paramsWatch.threshold.push(i);
+            } else paramsWatch.threshold = paramsWatch.threshold.split(",");
+            configWatcher.threshold = paramsWatch.threshold;
+            return configWatcher;
+        }
+        scrollWatcherCreate(configWatcher) {
+            this.observer = new IntersectionObserver(((entries, observer) => {
+                entries.forEach((entry => {
+                    this.scrollWatcherCallback(entry, observer);
+                }));
+            }), configWatcher);
+        }
+        scrollWatcherInit(items, configWatcher) {
+            this.scrollWatcherCreate(configWatcher);
+            items.forEach((item => this.observer.observe(item)));
+        }
+        scrollWatcherIntersecting(entry, targetElement) {
+            if (entry.isIntersecting) {
+                if (!targetElement.classList.contains("_watcher-view")) {
+                    targetElement.classList.add("_watcher-view", "animation");
+                    this.scrollWatcherLogging(`Я вижу ${targetElement.classList}, добавил класс _watcher-view`);
+                }
+            } else if (targetElement.classList.contains("_watcher-view")) {
+                targetElement.classList.remove("_watcher-view", "animation");
+                this.scrollWatcherLogging(`Я не вижу ${targetElement.classList}, убрал класс _watcher-view`);
+            }
+        }
+        scrollWatcherOff(targetElement, observer) {
+            observer.unobserve(targetElement);
+            this.scrollWatcherLogging(`Я перестал следить за ${targetElement.classList}`);
+        }
+        scrollWatcherLogging(message) {
+            this.config.logging ? console.log(`[Наблюдатель]: ${message}`) : null;
+        }
+        scrollWatcherCallback(entry, observer) {
+            const targetElement = entry.target;
+            this.scrollWatcherIntersecting(entry, targetElement);
+            if (targetElement.hasAttribute("data-watch-once") && entry.isIntersecting) this.scrollWatcherOff(targetElement, observer);
+            document.dispatchEvent(new CustomEvent("watcherCallback", {
+                detail: {
+                    entry
+                }
+            }));
+        }
+        uniqArray(array) {
+            return array.filter(((item, index, self) => self.indexOf(item) === index));
+        }
+    }
+    flsModules.watcher = new ScrollWatcher({});
     function DynamicAdapt(type) {
         this.type = type;
     }

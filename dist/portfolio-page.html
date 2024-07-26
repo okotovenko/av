@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Підключення Open Graph -->
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"> -->
+<!--<html prefix="og: https://ogp.me/ns#"> -->
+
+<head>
+	<title>portfolio-page</title>
+	<meta charset="UTF-8">
+	<!-- Не обов'язковий мета-тег для ІЕ (Internet Explorer) та його версії (Edge (можливі також версії  ..., IE8, IE9, IE10, IE11)) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240726185943">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="ТУТ ВКАЗУЄМО КЛЮЧОВІ СЛОВА ДЛЯ ПОШУКОВИХ СИСТЕМ">
+	<meta name="description" content="ТУТ КОРОТКИЙ ОПИС-ПРИЗНАЧЕННЯ СТОРІНКИ">
+	<meta name="author" content="АВТОР">
+	<!-- Open Graph -->
+	<!-- <meta property="og:site_name" content="---" /> -->
+	<!--<meta property="og:description" content="---"> -->
+	<!--<meta property="og:title" content="---" /> -->
+	<!--<meta property="og:type" content="website" /> -->
+	<!--<meta property="og:image" content="img/1200_container.jpg" /> -->
+	<!-- <meta property="og:url" content="https://periodontist.com.ua/">  -->
+	<!--<meta property="og:image:secure_url" content="img/630_container.jpg" /> -->
+	<!--<meta property="og:image:type" content="image/jpg" /> -->
+	<!--<meta property="og:image:width" content="400" /> -->
+	<!--<meta property="og:image:height" content="300" /> -->
+	<!--<meta property="og:image:alt" content="container" /> -->
+	<!--<meta property="og:video" content="https://www.youtube.com/watch?v=HaLZOla399I&ab_channel=UaPro" /> -->
+	<!--<meta property="og:video:secure_url" content="https://www.youtube.com/watch?v=HaLZOla399I&ab_channel=UaPro" /> -->
+	<!--<meta property="og:video:type" content="application/x-shockwave-flash" /> -->
+	<!--<meta property="og:video:width" content="400" /> -->
+	<!--<meta property="og:video:height" content="300" /> -->
+</head>
+
+<body>
+	<div class="preloader">
+		<svg class="preloader__image" role="img" viewBox="0 0 512 512">
+			<path fill="#C71717" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+			</path>
+		</svg>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href='index.html' class='header__logo'><img src='img/logo-white.svg' alt='logo'></a>
+				<div class='header__menu menu'>
+					<button type='button' class='menu__icon icon-menu'> <span></span></button>
+					<nav class='menu__body'>
+						<ul class='menu__list'>
+							<li class='menu__item'><a href='#' class='menu__link'>About</a></li>
+							<li class='menu__item'><a href='portfolio-page.html' class='menu__link'>Portfolio</a></li>
+							<li class='menu__item'><a href='#' class='menu__link'>services</a></li>
+							<li class='menu__item'><a href='#' class='menu__link'>reviews</a></li>
+							<li class='menu__item'><a href='#' class='menu__link menu__link-blog'>blog</a></li>
+						</ul>
+						<button type='button' class='menu__contact'>contact</button>
+						<div class="header__box">
+							<div class="header__social">
+								<div class="header__links">
+									<a href="#">
+										<picture><source srcset="img/header/whatsap.webp" type="image/webp"><img src="img/header/whatsap.png" alt="whatsap"></picture>
+									</a>
+									<a href="#">
+										<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
+									</a>
+									<a href="#">
+										<picture><source srcset="img/header/instagram.webp" type="image/webp"><img src="img/header/instagram.png" alt="instagram"></picture>
+									</a>
+									<a href="#">
+										<picture><source srcset="img/header/mail.webp" type="image/webp"><img src="img/header/mail.png" alt="mail"></picture>
+									</a>
+								</div>
+							</div>
+							<ul class="header__langflags">
+								<li class="header__langflags-active">
+									<picture><source srcset="img/header/flag-uk.webp" type="image/webp"><img src="img/header/flag-uk.png" alt="uk"></picture>
+								</li>
+							</ul>
+						</div>
+						<p class="header__copy">Copyright © 2024</p>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+		<main class="portfolio-page page--portfolio">
+			<section class="page--portfolio__hero hero-portfolio">
+				<div class="hero-portfolio__container">
+					<div class="hero-portfolio__left">
+						<h1><span>all my best</span> <br>
+							<span>Projects</span>
+						</h1>
+						<p>Welcome to the world of visual elegance and effective communication!</p>
+						<p>Here, every slide is a skillfully constructed <br> story, and every presentation is an <br>
+							opportunity to stand out and impress.</p>
+						<a data-da=".hero-portfolio__right, 767.98, 2" href="#" data-popup="#popup-form" class="hero-portfolio__consultation">book a free
+							consultation!</a>
+					</div>
+					<div class="hero-portfolio__right">
+						<picture><source srcset="img/portfolio-page/trustpilot.webp" type="image/webp"><img src="img/portfolio-page/trustpilot.png" alt="img"></picture>
+					</div>
+				</div>
+			</section>
+			<section class="page--portfolio__portfolio portfolio-portfolio">
+				<div class="portfolio-portfolio__container">
+					<ul class="portfolio-portfolio__buttons">
+						<li data-filter="ALL" class="portfolio-portfolio__button visible active">ALL</li>
+						<li data-filter="Agriculture" class="portfolio-portfolio__button">Agriculture</li>
+						<li data-filter="Automotive" class="portfolio-portfolio__button">Automotive</li>
+						<li data-filter="Beauty" class="portfolio-portfolio__button">Beauty</li>
+						<li data-filter="Consulting" class="portfolio-portfolio__button">Consulting</li>
+						<li data-filter="Education" class="portfolio-portfolio__button">Education</li>
+						<li data-filter="Energy" class="portfolio-portfolio__button">Energy</li>
+						<li data-filter="Fashion" class="portfolio-portfolio__button">Fashion</li>
+						<li data-filter="Finance" class="portfolio-portfolio__button">Finance</li>
+						<li data-filter="Food Industry" class="portfolio-portfolio__button">Food Industry</li>
+						<li data-filter="Gaming" class="portfolio-portfolio__button">Gaming</li>
+						<li data-filter="Healthcare" class="portfolio-portfolio__button">Healthcare</li>
+						<li data-filter="Logistics" class="portfolio-portfolio__button">Logistics</li>
+						<li data-filter="Manufacturing" class="portfolio-portfolio__button">Manufacturing</li>
+						<li data-filter="marketing" class="portfolio-portfolio__button">marketing</li>
+						<li data-filter="Media" class="portfolio-portfolio__button">Media</li>
+						<li data-filter="Nonprofit" class="portfolio-portfolio__button">Nonprofit</li>
+						<li data-filter="Public Services" class="portfolio-portfolio__button">Public Services</li>
+						<li data-filter="Real Estate" class="portfolio-portfolio__button">Real Estate</li>
+						<li data-filter="Retail" class="portfolio-portfolio__button">Retail</li>
+						<li data-filter="Technology" class="portfolio-portfolio__button">Technology</li>
+						<li data-filter="Tourism" class="portfolio-portfolio__button">Tourism</li>
+					</ul>
+					<div data-showmore="items" class="portfolio-portfolio__box">
+						<ul data-showmore-content="8" data-showmore-content-mobile="6" class="portfolio-portfolio__items">
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="project-page.html">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Education" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Education" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Agriculture" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Education" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Logistics" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Logistics" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Logistics" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Gaming" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+							<li data-item="Agriculture" class="portfolio-portfolio__item">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="" class="portfolio__front"></picture>
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="" class="portfolio__back"></picture>
+								</a>
+							</li>
+						</ul>
+						<button hidden data-showmore-button type="button" class="portfolio-portfolio__all block__more">
+							<span>more projects</span>
+							<span>more projects</span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="page__form form-hor">
+				<div class="form-hor__container">
+					<div class="form-hor__content">
+						<h2>URGENT PROJECT? <br>
+							<span>CONTACT NOW!</span>
+						</h2>
+						<p>Fill out the form and I will give you <br>
+							the answer in less <span>than 15 minutes!</span>
+						</p>
+					</div>
+					<form action="files/sendmail/sendmail.php" data-dev enctype="multipart/form-data" class="form form-horizontal" method="POST">
+						<input type="hidden" name="form_subject" value="Тема листа">
+						<label class="form-label form-label-name">
+							<input type="text" data-required name="name" id="name" autocomplete="off" maxlength="255" data-error="Error" placeholder="*NAME" class="input">
+						</label>
+						<label class="form-label">
+							<input type="email" data-required name="email" id="email" autocomplete="off" maxlength="255" data-error="Error" placeholder="*E-MAIL" class="input">
+						</label>
+						<button type="submit" class="button">submit</button>
+					</form>
+				</div>
+			</section>
+			<section class="page__process process">
+				<div class="process__container">
+					<h2><span>EASY</span> BRIEFING PROCESS</h2>
+					<div class="process__slider swiper">
+						<div class="process-scrollbar"></div>
+						<div class="process__wrapper swiper-wrapper">
+							<article class="process__slide swiper-slide">
+								<span>Step #1</span>
+								<h3>Consultation</h3>
+								<p>We start by understanding your objectives, target audience,
+									and brand identity to create
+									a roadmap for your presentation.</p>
+							</article>
+							<article class="process__slide swiper-slide">
+								<span>Step #2</span>
+								<h3>Design</h3>
+								<p>I work with my magic, combining creativity with strategic thinking to bring your&nbsp;ideas
+									to
+									life
+									visually.</p>
+							</article>
+							<article class="process__slide swiper-slide">
+								<span>Step #3</span>
+								<h3>Feedback</h3>
+								<p>I value your input and provide multiple rounds of revisions
+									to ensure the final product exceeds your expectations.</p>
+							</article>
+							<article class="process__slide swiper-slide">
+								<span>Step #4</span>
+								<h3>Delivery</h3>
+								<p>Once approved, I deliver your presentation in the format of your choice, ready to impress
+									your
+									audience.</p>
+							</article>
+						</div>
+					</div>
+					<div class="process__box">
+						<div class="process__decor"></div>
+						<div class="process__left">
+							<div class="process__top">
+								<p>your draft</p>
+								<div class="process__arrow"><img src="img/main-page/process/Arrow.svg" alt="arrow"></div>
+							</div>
+							<picture><source srcset="img/main-page/process/draft.webp" type="image/webp"><img src="img/main-page/process/draft.png" alt="draft"></picture>
+						</div>
+						<div class="process__right">
+							<p>my design</p>
+							<picture><source srcset="img/main-page/process/design.webp" type="image/webp"><img src="img/main-page/process/design.png" alt="design"></picture>
+						</div>
+					</div>
+					<a href="#" class="process__button">book a free consultation</a>
+				</div>
+			</section>
+			<section data-watch-threshold="0.9" id="services" class="page__services services">
+				<div class="services__container">
+					<h2 class="services__title"><span>full list</span> of services</h2>
+					<p>Are you ready to take your presentations to the next level? Look no further! All-encompassing
+						presentation
+						services are designed to elevate your content, captivate your audience, and leave a lasting
+						impression.</p>
+					<div class="services__slider swiper">
+						<div class="services-scrollbar"></div>
+						<div class="services__wrapper swiper-wrapper">
+							<div class="services__slide swiper-slide">
+								<div class="services__item">
+									<div class="services__content">
+										<div class="services__icon">
+											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+										</div>
+										<h3>Design Update111</h3>
+										<p>Whether you're pitching to investors, training your team, or presenting at a
+											conference, I
+											specialize in crafting visually stunning and engaging presentations that leave a
+											lasting
+											impression!</p>
+									</div>
+									<div class="services__img">
+										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="services__slide swiper-slide">
+								<div class="services__item">
+									<div class="services__content">
+										<div class="services__icon">
+											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+										</div>
+										<h3>Design Update222</h3>
+										<p>Whether you're pitching to investors, training your team, or presenting at a
+											conference, I
+											specialize in crafting visually stunning and engaging presentations that leave a
+											lasting
+											impression!</p>
+									</div>
+									<div class="services__img">
+										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="services__slide swiper-slide">
+								<div class="services__item">
+									<div class="services__content">
+										<div class="services__icon">
+											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+										</div>
+										<h3>Design Updat333</h3>
+										<p>Whether you're pitching to investors, training your team, or presenting at a
+											conference, I
+											specialize in crafting visually stunning and engaging presentations that leave a
+											lasting
+											impression!</p>
+									</div>
+									<div class="services__img">
+										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="services__slide swiper-slide">
+								<div class="services__item">
+									<div class="services__content">
+										<div class="services__icon">
+											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+										</div>
+										<h3>Design Update444</h3>
+										<p>Whether you're pitching to investors, training your team, or presenting at a
+											conference, I
+											specialize in crafting visually stunning and engaging presentations that leave a
+											lasting
+											impression!</p>
+									</div>
+									<div class="services__img">
+										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="services__slide swiper-slide">
+								<div class="services__item">
+									<div class="services__content">
+										<div class="services__icon">
+											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+										</div>
+										<h3>Design Update555</h3>
+										<p>Whether you're pitching to investors, training your team, or presenting at a
+											conference, I
+											specialize in crafting visually stunning and engaging presentations that leave a
+											lasting
+											impression!</p>
+									</div>
+									<div class="services__img">
+										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="services__slide swiper-slide">
+								<div class="services__item">
+									<div class="services__content">
+										<div class="services__icon">
+											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+										</div>
+										<h3>Design Update666</h3>
+										<p>Whether you're pitching to investors, training your team, or presenting at a
+											conference, I
+											specialize in crafting visually stunning and engaging presentations that leave a
+											lasting
+											impression!</p>
+									</div>
+									<div class="services__img">
+										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="services__slide swiper-slide">
+								<div class="services__item">
+									<div class="services__content">
+										<div class="services__icon">
+											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+										</div>
+										<h3>Design Update777</h3>
+										<p>Whether you're pitching to investors, training your team, or presenting at a
+											conference, I
+											specialize in crafting visually stunning and engaging presentations that leave a
+											lasting
+											impression!</p>
+									</div>
+									<div class="services__img">
+										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="services-button-prev">
+							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
+						</button>
+						<button type="button" class="services-button-next">
+							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="page__faq faq">
+				<div class="faq__container">
+					<h2>FAQs:</h2>
+					<div data-spollers class="faq__spollers">
+						<div class="faq__item">
+							<button type="button" data-spoller class="faq__title">Сколько нужно времени и денег, чтобы создать
+								презентацию?</button>
+							<div class="faq__body">Ответ на этот вопрос зависит от множества факторов: объем слайдов, наличие анимации,
+								подготовка к печати и многое, много другое. Точный бюджет проекта можно будет сказать после небольшого
+								диалога, но если вам нужен общий ориентир, то моя почасовая ставка - от ## евро.</div>
+						</div>
+						<div class="faq__item">
+							<button type="button" data-spoller class="faq__title">Сколько нужно времени и денег, чтобы создать
+								презентацию?</button>
+							<div class="faq__body">Ответ на этот вопрос зависит от множества факторов: объем слайдов, наличие анимации,
+								подготовка к печати и многое, много другое. Точный бюджет проекта можно будет сказать после небольшого
+								диалога, но если вам нужен общий ориентир, то моя почасовая ставка - от ## евро.</div>
+						</div>
+						<div class="faq__item">
+							<button type="button" data-spoller class="faq__title">Сколько нужно времени и денег, чтобы создать
+								презентацию?</button>
+							<div class="faq__body">Ответ на этот вопрос зависит от множества факторов: объем слайдов, наличие анимации,
+								подготовка к печати и многое, много другое. Точный бюджет проекта можно будет сказать после небольшого
+								диалога, но если вам нужен общий ориентир, то моя почасовая ставка - от ## евро.</div>
+						</div>
+						<div class="faq__item">
+							<button type="button" data-spoller class="faq__title">Сколько нужно времени и денег, чтобы создать
+								презентацию?</button>
+							<div class="faq__body">Ответ на этот вопрос зависит от множества факторов: объем слайдов, наличие анимации,
+								подготовка к печати и многое, много другое. Точный бюджет проекта можно будет сказать после небольшого
+								диалога, но если вам нужен общий ориентир, то моя почасовая ставка - от ## евро.</div>
+						</div>
+						<div class="faq__item">
+							<button type="button" data-spoller class="faq__title">Сколько нужно времени и денег, чтобы создать
+								презентацию?</button>
+							<div class="faq__body">Ответ на этот вопрос зависит от множества факторов: объем слайдов, наличие анимации,
+								подготовка к печати и многое, много другое. Точный бюджет проекта можно будет сказать после небольшого
+								диалога, но если вам нужен общий ориентир, то моя почасовая ставка - от ## евро.</div>
+						</div>
+						<div class="faq__item">
+							<button type="button" data-spoller class="faq__title">Сколько нужно времени и денег, чтобы создать
+								презентацию?</button>
+							<div class="faq__body">Ответ на этот вопрос зависит от множества факторов: объем слайдов, наличие анимации,
+								подготовка к печати и многое, много другое. Точный бюджет проекта можно будет сказать после небольшого
+								диалога, но если вам нужен общий ориентир, то моя почасовая ставка - от ## евро.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top">
+					<div class="footer__left">
+						<h3>contact me!</h3>
+						<form action="files/sendmail/sendmail.php" data-dev enctype="multipart/form-data" class="form form-vertical" method="POST">
+							<input type="hidden" name="form_subject" value="Тема листа">
+							<label class="form-label form-label-name">
+								<input type="text" data-required name="name" id="name-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="*NAME" class="input">
+							</label>
+							<label class="form-label">
+								<input type="email" data-required name="email" id="email-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="*E-MAIL" class="input">
+							</label>
+							<button type="submit" class="button">send an application</button>
+						</form>
+					</div>
+					<div class="footer__right">
+						<div class="footer__box">
+							<div class="footer__logos">
+								<div class="footer__av">
+									<img src="img/logo-color.svg" alt="logo">
+								</div>
+								<div class="footer__fh">
+									<picture><source srcset="img/logo-fh.webp" type="image/webp"><img src="img/logo-fh.png" alt="logo fh"></picture>
+								</div>
+							</div>
+							<div class="footer__menu">
+								<div class="footer__services">
+									<h4>services</h4>
+									<ul>
+										<li>Infographic Design</li>
+										<li>Interactive Presentations</li>
+										<li>Design Update</li>
+										<li>Template Design</li>
+										<li>3D Design</li>
+										<li>Copywrite / Text Edit</li>
+										<li>Animation</li>
+										<li>Print-Ready</li>
+									</ul>
+								</div>
+								<div class="footer__about">
+									<h4>about</h4>
+									<ul>
+										<li><a href="#">Portfolio</a></li>
+										<li><a href="#">Customers reviews</a></li>
+										<li><a href="#">Briefing process</a></li>
+										<li><a href="#">Start my project</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div data-da=".footer__logos, 768, 2" class="footer__social">
+							<a href="#">
+								<picture><source srcset="img/header/whatsap.webp" type="image/webp"><img src="img/header/whatsap.png" alt="whatsap"></picture>
+							</a>
+							<a href="#">
+								<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
+							</a>
+							<a href="#">
+								<picture><source srcset="img/header/instagram.webp" type="image/webp"><img src="img/header/instagram.png" alt="instagram"></picture>
+							</a>
+							<a href="#">
+								<picture><source srcset="img/header/mail.webp" type="image/webp"><img src="img/header/mail.png" alt="mail"></picture>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Briefing</a></li>
+						<li><a href="#">Reviews</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">User Agreement</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="popup-form" aria-hidden="true" class="popup popup-form">
+		<div class="popup__wrapper popup__wrapper-video ">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__img">
+						<img src="img/logo-color.svg" alt="logo">
+					</div>
+					<h2>Fill out the form below and <br>
+						I’ll reach out within the hour!</h2>
+					<p>Powerful Presentations Perfected</p>
+					<form action="files/sendmail/sendmail.php" data-dev enctype="multipart/form-data" class="form form-vertical form-popup" method="POST">
+						<input type="hidden" name="form_subject" value="Тема листа">
+						<label class="form-label form-label-name">
+							<input type="text" data-required name="name" id="name-3" autocomplete="off" maxlength="255" data-error="Error" placeholder="*NAME" class="input">
+						</label>
+						<label class="form-label">
+							<input type="email" data-required name="email" id="email-3" autocomplete="off" maxlength="255" data-error="Error" placeholder="*E-MAIL" class="input">
+						</label>
+						<button type="submit" class="button">START THE PROJECT!</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-video" aria-hidden="true" class="popup popup-video">
+		<div class="popup__wrapper popup__wrapper-video">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-popup-youtube-place class="popup__video">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-thanks" aria-hidden="true" class="popup popup-thanks">
+		<div class="popup__wrapper popup__wrapper-video ">
+			<div class="popup__content">
+				<div class="popup__decor"></div>
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<div class="popup__img">
+						<img src="img/logo-color.svg" alt="logo">
+					</div>
+					<h3>Thanks for your apply!</h3>
+					<h4>I’ll contact you very soon!</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240726185943"></script>
+</body>
+
+</html>

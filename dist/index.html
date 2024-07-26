@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240723234900">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240726185943">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
@@ -48,13 +48,13 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href='#' class='header__logo'><img src='img/logo-white.svg' alt='logo'></a>
+				<a href='index.html' class='header__logo'><img src='img/logo-white.svg' alt='logo'></a>
 				<div class='header__menu menu'>
 					<button type='button' class='menu__icon icon-menu'> <span></span></button>
 					<nav class='menu__body'>
 						<ul class='menu__list'>
 							<li class='menu__item'><a href='#' class='menu__link'>About</a></li>
-							<li class='menu__item'><a href='#' class='menu__link'>Portfolio</a></li>
+							<li class='menu__item'><a href='portfolio-page.html' class='menu__link'>Portfolio</a></li>
 							<li class='menu__item'><a href='#' class='menu__link'>services</a></li>
 							<li class='menu__item'><a href='#' class='menu__link'>reviews</a></li>
 							<li class='menu__item'><a href='#' class='menu__link menu__link-blog'>blog</a></li>
@@ -497,6 +497,12 @@
 									tellus. </p>
 							</article>
 						</div>
+						<button type="button" class="feedbacks-button-prev">
+							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
+						</button>
+						<button type="button" class="feedbacks-button-next">
+							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
+						</button>
 					</div>
 				</div>
 			</section>
@@ -788,7 +794,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__services services">
+			<section data-watch-threshold="0.9" id="services" class="page__services services">
 				<div class="services__container">
 					<h2 class="services__title"><span>full list</span> of services</h2>
 					<p>Are you ready to take your presentations to the next level? Look no further! All-encompassing
@@ -925,6 +931,12 @@
 								</div>
 							</div>
 						</div>
+						<button type="button" class="services-button-prev">
+							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
+						</button>
+						<button type="button" class="services-button-next">
+							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
+						</button>
 					</div>
 				</div>
 			</section>
@@ -1121,9 +1133,30 @@
 									</div>
 								</div>
 							</article>
-							<a href="#" class="musings__more">more articles</a>
+							<article class="musings__small">
+								<a href="#" class="musings__top">
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="img"></picture>
+								</a>
+								<div class="musings__content">
+									<h4 class="musings__title">Infographic Design</h4>
+									<div class="musings__text">
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+											dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+											nascetur ridiculus mus. </p>
+									</div>
+									<div class="musings__bottom">
+										<div class="musings__date">
+											<div class="musings__day">1 day ago</div>
+											<div class="musings__time">6 min read</div>
+										</div>
+										<a href="@" class="musings__link _icon-arrow">read more
+										</a>
+									</div>
+								</div>
+							</article>
 						</div>
 					</div>
+					<a href="#" class="musings__more">more articles</a>
 				</div>
 			</section>
 			<section class="page__faq faq">
@@ -1309,7 +1342,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240723234900"></script>
+	<script src="js/app.min.js?_v=20240726185943"></script>
 </body>
 
 </html>
