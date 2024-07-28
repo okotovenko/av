@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240726185943">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240728222525">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
@@ -48,15 +48,18 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href='index.html' class='header__logo'><img src='img/logo-white.svg' alt='logo'></a>
+				<a href='index.html' class='header__logo'>
+					<img src='img/logo-white.svg' alt='logo'>
+					<img src="img/logo-color.svg" alt="logo">
+				</a>
 				<div class='header__menu menu'>
 					<button type='button' class='menu__icon icon-menu'> <span></span></button>
 					<nav class='menu__body'>
 						<ul class='menu__list'>
 							<li class='menu__item'><a href='#' class='menu__link'>About</a></li>
 							<li class='menu__item'><a href='portfolio-page.html' class='menu__link'>Portfolio</a></li>
-							<li class='menu__item'><a href='#' class='menu__link'>services</a></li>
-							<li class='menu__item'><a href='#' class='menu__link'>reviews</a></li>
+							<li class='menu__item'><a href='blog-page.html' class='menu__link'>services</a></li>
+							<li class='menu__item'><a href='blog-inside-page.html' class='menu__link'>reviews</a></li>
 							<li class='menu__item'><a href='#' class='menu__link menu__link-blog'>blog</a></li>
 						</ul>
 						<button type='button' class='menu__contact'>contact</button>
@@ -91,6 +94,9 @@
 		</header>
 		<main class="page">
 			<section class="page__hero hero">
+				<div class="decor-mob">
+					<picture><source srcset="img/bg-mob.webp" type="image/webp"><img src="img/bg-mob.png" alt="bg"></picture>
+				</div>
 				<div class="hero__container">
 					<div class="hero__left">
 						<h1>powerful <br>
@@ -1086,7 +1092,7 @@
 											<div class="musings__day">1 day ago</div>
 											<div class="musings__time">6 min read</div>
 										</div>
-										<a href="@" class="musings__link _icon-arrow">read more
+										<a href="#" class="musings__link _icon-arrow">read more
 										</a>
 									</div>
 								</div>
@@ -1285,8 +1291,8 @@
 						<li><a href="#">Reviews</a></li>
 						<li><a href="#">Blog</a></li>
 						<li><a href="#">FAQ</a></li>
-						<li><a href="#">User Agreement</a></li>
-						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="argeement-page.html">User Agreement</a></li>
+						<li><a href="policy-page.html">Privacy Policy</a></li>
 					</ul>
 				</div>
 			</div>
@@ -1342,7 +1348,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240726185943"></script>
+	<script src="js/app.min.js?_v=20240728222525"></script>
 </body>
 
 </html>

@@ -4989,6 +4989,51 @@
             }
             handleLastVisibleSlide(swiper);
         }
+        if (document.querySelector(".musings-project__slider")) {
+            const swiper = new Swiper(".musings-project__slider", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 3,
+                spaceBetween: 35,
+                autoHeight: true,
+                speed: 800,
+                navigation: {
+                    prevEl: ".musings-project-prev",
+                    nextEl: ".musings-project-next"
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 35
+                    }
+                },
+                on: {
+                    slideChange: function() {
+                        handleLastVisibleSlide(swiper);
+                    },
+                    resize: function() {
+                        handleLastVisibleSlide(swiper);
+                    }
+                }
+            });
+            function handleLastVisibleSlide(swiperInstance) {
+                const slides = document.querySelectorAll(".musings-project__slide");
+                const lastVisibleSlideIndex = swiperInstance.activeIndex + swiperInstance.params.slidesPerView - 1;
+                slides.forEach((slide => slide.classList.remove("last-visible")));
+                if (lastVisibleSlideIndex < slides.length) slides[lastVisibleSlideIndex].classList.add("last-visible");
+                if (swiperInstance.isEnd) slides[lastVisibleSlideIndex].classList.add("actual-last-visible");
+            }
+            handleLastVisibleSlide(swiper);
+        }
     }
     function initSlidersScroll() {
         let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
@@ -6202,6 +6247,13 @@
             }), 500);
         }));
     }
+    function addClassToHeader() {
+        document.addEventListener("DOMContentLoaded", (function() {
+            const currentUrl = window.location.href;
+            const block = document.querySelector(".header");
+            if (block) if (currentUrl.includes("http://192.168.1.114:8080/argeement-page.html")) block.classList.add("header-white"); else if (currentUrl.includes("http://192.168.1.114:8080/policy-page.html")) block.classList.add("header-white");
+        }));
+    }
     window["FLS"] = true;
     isWebp();
     menuInit();
@@ -6213,4 +6265,5 @@
     });
     formSubmit();
     preloader();
+    addClassToHeader();
 })();
