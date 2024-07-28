@@ -6251,7 +6251,7 @@
         document.addEventListener("DOMContentLoaded", (function() {
             const currentUrl = window.location.href;
             const block = document.querySelector(".header");
-            if (block) if (currentUrl.includes("http://192.168.1.114:8080/argeement-page.html")) block.classList.add("header-white"); else if (currentUrl.includes("http://192.168.1.114:8080/policy-page.html")) block.classList.add("header-white");
+            if (block) if (currentUrl.includes("http://192.168.1.114:8080/argeement-page.html")) block.classList.add("header-white"); else if (currentUrl.includes("http://192.168.1.114:8080/policy-page.html")) block.classList.add("header-white"); else if (currentUrl.includes("https://okotovenko.github.io/av/dist/argeement-page.html")) block.classList.add("header-white"); else if (currentUrl.includes("https://okotovenko.github.io/av/dist/policy-page.html")) block.classList.add("header-white");
         }));
     }
     window["FLS"] = true;
