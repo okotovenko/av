@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240729231040">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240730231714">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
@@ -40,10 +40,61 @@
 
 <body>
 	<div class="preloader">
-		<svg class="preloader__image" role="img" viewBox="0 0 512 512">
-			<path fill="#C71717" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
-			</path>
+		<!-- <svg class="preloader__image" role="img" viewBox="0 0 512 512">
+		<path fill="#C71717"
+			d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+		</path>
+	</svg> -->
+
+		<svg class="preloader__image" role="img" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+			<g fill="#C71717">
+				<!-- Ромбы по кругу -->
+				<polygon points="300,100 340,140 300,180 260,140">
+					<animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+
+				<polygon points="300,100 340,140 300,180 260,140" transform="rotate(45 300 300)">
+					<animateTransform attributeName="transform" type="rotate" from="45 300 300" to="405 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+
+				<polygon points="300,100 340,140 300,180 260,140" transform="rotate(90 300 300)">
+					<animateTransform attributeName="transform" type="rotate" from="90 300 300" to="450 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+
+				<polygon points="300,100 340,140 300,180 260,140" transform="rotate(135 300 300)">
+					<animateTransform attributeName="transform" type="rotate" from="135 300 300" to="495 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+
+				<polygon points="300,100 340,140 300,180 260,140" transform="rotate(180 300 300)">
+					<animateTransform attributeName="transform" type="rotate" from="180 300 300" to="540 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+
+				<polygon points="300,100 340,140 300,180 260,140" transform="rotate(225 300 300)">
+					<animateTransform attributeName="transform" type="rotate" from="225 300 300" to="585 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+
+				<polygon points="300,100 340,140 300,180 260,140" transform="rotate(270 300 300)">
+					<animateTransform attributeName="transform" type="rotate" from="270 300 300" to="630 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+
+				<polygon points="300,100 340,140 300,180 260,140" transform="rotate(315 300 300)">
+					<animateTransform attributeName="transform" type="rotate" from="315 300 300" to="675 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+
+				<polygon points="300,100 340,140 300,180 260,140" transform="rotate(360 300 300)">
+					<animateTransform attributeName="transform" type="rotate" from="360 300 300" to="720 300 300" dur="2s" repeatCount="indefinite" />
+				</polygon>
+			</g>
 		</svg>
+
+
+
+
+
+
+
+
+
 	</div>
 	<div class="wrapper">
 		<header class="header">
@@ -357,7 +408,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240729231040"></script>
+	<script src="js/app.min.js?_v=20240730231714"></script>
 </body>
 
 </html>

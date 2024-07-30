@@ -4688,17 +4688,29 @@
         }
         function initializeProcessSlider() {
             const isMobile = window.matchMedia("(max-width: 768px)").matches;
-            let processSwiper = null;
-            if (isMobile) if (!document.querySelector(".process__slider").swiper) processSwiper = new Swiper(".process__slider", {
-                modules: [ Navigation ],
-                slidesPerView: 1,
-                navigation: {
-                    prevEl: ".process-button-prev",
-                    nextEl: ".process-button-next"
+            const sliderElement = document.querySelector(".process__slider");
+            if (sliderElement) {
+                let processSwiper = sliderElement.swiper;
+                if (isMobile) {
+                    if (!processSwiper) {
+                        processSwiper = new Swiper(sliderElement, {
+                            modules: [ Navigation ],
+                            slidesPerView: 1,
+                            navigation: {
+                                prevEl: ".process-button-prev",
+                                nextEl: ".process-button-next"
+                            }
+                        });
+                        sliderElement.swiper = processSwiper;
+                    }
+                } else if (processSwiper) {
+                    processSwiper.destroy(true, true);
+                    sliderElement.swiper = null;
                 }
-            });
+            }
         }
         initializeProcessSlider();
+        window.addEventListener("resize", initializeProcessSlider);
         window.addEventListener("resize", (function() {
             const isMobile = window.matchMedia("(max-width: 768px)").matches;
             if (isMobile && !document.querySelector(".process__slider").swiper) {
@@ -4707,6 +4719,7 @@
             }
         }));
         if (document.querySelector(".related-project__slider")) {
+            let isClassAdded = false;
             const swiper = new Swiper(".related-project__slider", {
                 modules: [ Navigation ],
                 observer: true,
@@ -4736,21 +4749,23 @@
                     slideChange: function() {
                         handleLastVisibleSlide(swiper);
                     },
-                    resize: function() {
-                        handleLastVisibleSlide(swiper);
-                    }
+                    resize: function() {}
                 }
             });
             function handleLastVisibleSlide(swiperInstance) {
                 const slides = document.querySelectorAll(".related-project__slide");
                 const lastVisibleSlideIndex = swiperInstance.activeIndex + swiperInstance.params.slidesPerView - 1;
                 slides.forEach((slide => slide.classList.remove("last-visible")));
-                if (lastVisibleSlideIndex < slides.length) slides[lastVisibleSlideIndex].classList.add("last-visible");
+                if (!isClassAdded) {
+                    if (lastVisibleSlideIndex < slides.length) slides[lastVisibleSlideIndex].classList.add("last-visible");
+                    isClassAdded = true;
+                }
                 if (swiperInstance.isEnd) slides[lastVisibleSlideIndex].classList.add("actual-last-visible");
             }
             handleLastVisibleSlide(swiper);
         }
         if (document.querySelector(".musings-project__slider")) {
+            let isClassAdded = false;
             const swiper = new Swiper(".musings-project__slider", {
                 modules: [ Navigation ],
                 observer: true,
@@ -4781,16 +4796,17 @@
                     slideChange: function() {
                         handleLastVisibleSlide(swiper);
                     },
-                    resize: function() {
-                        handleLastVisibleSlide(swiper);
-                    }
+                    resize: function() {}
                 }
             });
             function handleLastVisibleSlide(swiperInstance) {
                 const slides = document.querySelectorAll(".musings-project__slide");
                 const lastVisibleSlideIndex = swiperInstance.activeIndex + swiperInstance.params.slidesPerView - 1;
                 slides.forEach((slide => slide.classList.remove("last-visible")));
-                if (lastVisibleSlideIndex < slides.length) slides[lastVisibleSlideIndex].classList.add("last-visible");
+                if (!isClassAdded) {
+                    if (lastVisibleSlideIndex < slides.length) slides[lastVisibleSlideIndex].classList.add("last-visible");
+                    isClassAdded = true;
+                }
                 if (swiperInstance.isEnd) slides[lastVisibleSlideIndex].classList.add("actual-last-visible");
             }
             handleLastVisibleSlide(swiper);
