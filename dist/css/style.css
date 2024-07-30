@@ -4675,7 +4675,7 @@ body::after {
 }
 
 .page--agreement__box ul:last-of-type li {
-  margin: 0;
+  margin: 0 !important;
   list-style-type: disc;
 }
 
