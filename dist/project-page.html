@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240730232434">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250515163701">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
@@ -121,21 +121,16 @@
 										<picture><source srcset="img/header/whatsap.webp" type="image/webp"><img src="img/header/whatsap.png" alt="whatsap"></picture>
 									</a>
 									<a href="#">
-										<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
+										<picture><source srcset="img/header/telegram.webp" type="image/webp"><img src="img/header/telegram.png" alt="telegram"></picture>
 									</a>
 									<a href="#">
-										<picture><source srcset="img/header/instagram.webp" type="image/webp"><img src="img/header/instagram.png" alt="instagram"></picture>
+										<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
 									</a>
 									<a href="#">
 										<picture><source srcset="img/header/mail.webp" type="image/webp"><img src="img/header/mail.png" alt="mail"></picture>
 									</a>
 								</div>
 							</div>
-							<ul class="header__langflags">
-								<li class="header__langflags-active">
-									<picture><source srcset="img/header/flag-uk.webp" type="image/webp"><img src="img/header/flag-uk.png" alt="uk"></picture>
-								</li>
-							</ul>
 						</div>
 						<p class="header__copy">Copyright © 2024</p>
 					</nav>
@@ -201,11 +196,11 @@
 			<section class="page__form form-hor">
 				<div class="form-hor__container">
 					<div class="form-hor__content">
-						<h2>URGENT PROJECT? <br>
+						<h2 class="subtitle">URGENT PROJECT? <br>
 							<span>CONTACT NOW!</span>
 						</h2>
-						<p>Fill out the form and I will give you <br>
-							the answer in less <span>than 15 minutes!</span>
+						<p>Fill out the form and I’ll answer
+							in a few minutes!</span>
 						</p>
 					</div>
 					<form action="files/sendmail/sendmail.php" data-dev enctype="multipart/form-data" class="form form-horizontal" method="POST">
@@ -216,7 +211,7 @@
 						<label class="form-label">
 							<input type="email" data-required name="email" id="email" autocomplete="off" maxlength="255" data-error="Error" placeholder="*E-MAIL" class="input">
 						</label>
-						<button type="submit" class="button">submit</button>
+						<button type="submit" class="button button-red">submit</button>
 					</form>
 				</div>
 			</section>
@@ -225,47 +220,24 @@
 					<div class="slides-project__decor-01"></div>
 					<div class="slides-project__decor-02"></div>
 					<div data-showmore="items" class="slides-project__box">
-						<ul data-showmore-content="12" data-showmore-content-mobile="11" class="slides-project__items">
-							<li class="slides-project__item">
+						<ul id="ul-li" data-gallery data-showmore-content="12" data-showmore-content-mobile="11" class="slides-project__items">
+							<li data-src="//www.youtube.com/embed/S4BvRUzoeSg?si=vwbaCKs4C-32Xm6W" class="slides-project__item">
+								<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="img"></picture>
+							</li>
+							<!-- <li data-src="//www.youtube.com/watch?v=S4BvRUzoeSg"
+								data-poster="img/main-page/portfolio/back.png" class="slides-project__item"
+								data-sub-html="<h4>Video Title</h4><p>Description of the video.</p>">
+								<a href="#">
+									<picture><source srcset="img/main-page/portfolio/back.webp" type="image/webp"><img src="img/main-page/portfolio/back.png" alt="img"></picture>
+								</a>
+							</li> -->
+							<li data-src="img/main-page/portfolio/front.png" class="slides-project__item">
 								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
 							</li>
-							<li class="slides-project__item">
+							<li data-src="img/main-page/portfolio/front.png" class="slides-project__item">
 								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
 							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
-								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
-							</li>
-							<li class="slides-project__item">
+							<li data-src="img/main-page/portfolio/front.png" class="slides-project__item">
 								<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
 							</li>
 						</ul>
@@ -311,61 +283,74 @@
 			</section>
 			<section class="page__process process">
 				<div class="process__container">
-					<h2><span>EASY</span> BRIEFING PROCESS</h2>
-					<div class="process__slider swiper">
-						<!-- <div class="process-scrollbar"></div> -->
-						<div class="process__wrapper swiper-wrapper">
-							<article class="process__slide swiper-slide">
-								<span>Step #1</span>
-								<h3>Consultation</h3>
-								<p>We start by understanding your objectives, target audience,
-									and brand identity to create
-									a roadmap for your presentation.</p>
-							</article>
-							<article class="process__slide swiper-slide">
-								<span>Step #2</span>
-								<h3>Design</h3>
-								<p>I work with my magic, combining creativity with strategic thinking to bring your&nbsp;ideas
-									to
-									life
-									visually.</p>
-							</article>
-							<article class="process__slide swiper-slide">
-								<span>Step #3</span>
-								<h3>Feedback</h3>
-								<p>I value your input and provide multiple rounds of revisions
-									to ensure the final product exceeds your expectations.</p>
-							</article>
-							<article class="process__slide swiper-slide">
-								<span>Step #4</span>
-								<h3>Delivery</h3>
-								<p>Once approved, I deliver your presentation in the format of your choice, ready to impress
-									your
-									audience.</p>
-							</article>
-						</div>
-						<button type="button" class="process-button-prev">
-							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
-						</button>
-						<button type="button" class="process-button-next">
-							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
-						</button>
-					</div>
+					<h2 class="subtitle">only 6 steps of working process</h2>
 					<div class="process__box">
-						<div class="process__decor"></div>
-						<div class="process__left">
-							<div class="process__top">
-								<p>your draft</p>
-								<div class="process__arrow"><img src="img/main-page/process/Arrow.svg" alt="arrow"></div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Consultation</h3>
+								<p>We target the main goals of the project, clarify the brief, figure out exact budget and deadlines.</p>
+								<span>Step #1</span>
 							</div>
-							<picture><source srcset="img/main-page/process/draft.webp" type="image/webp"><img src="img/main-page/process/draft.png" alt="draft"></picture>
+							<div class="process__icon">
+								<img src="img/main-page/process/01.svg" alt="Consultation">
+							</div>
 						</div>
-						<div class="process__right">
-							<p>my design</p>
-							<picture><source srcset="img/main-page/process/design.webp" type="image/webp"><img src="img/main-page/process/design.png" alt="design"></picture>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Test Slides</h3>
+								<p>I create 2-3 test slides for approval by style, colors
+									and overall composition.</p>
+								<span>Step #2</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/02.svg" alt="Test Slides">
+							</div>
+						</div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Feedback</h3>
+								<p>We include edits to the test design based on your comments until the style is fully approved.</p>
+								<span>Step #3</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/03.svg" alt="Feedback">
+							</div>
+						</div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Design</h3>
+								<p>I continue to work on the remaining slides according
+									to the previously approved style.</p>
+								<span>Step #4</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/04.svg" alt="Design">
+							</div>
+						</div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Feedback #2</h3>
+								<p>We include edits design based on your comments
+									until the pitch deck is fully approved.</p>
+								<span>Step #5</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/05.svg" alt="Feedback #2">
+							</div>
+						</div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Delivery</h3>
+								<p>I ship all source files and additional graphics
+									of the project.</p>
+								<span>Step #6</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/06.svg" alt="Delivery">
+							</div>
 						</div>
 					</div>
-					<a href="#" class="process__button">book a free consultation</a>
+					<a href="#" class="process__button button-red">book a free consultation</a>
 				</div>
 			</section>
 			<section data-watch-threshold="0.9" id="services" class="page__services services">
@@ -577,7 +562,7 @@
 							<label class="form-label">
 								<input type="email" data-required name="email" id="email-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="*E-MAIL" class="input">
 							</label>
-							<button type="submit" class="button">send an application</button>
+							<button type="submit" class="button button-red">send an application</button>
 						</form>
 					</div>
 					<div class="footer__right">
@@ -587,30 +572,34 @@
 									<img src="img/logo-color.svg" alt="logo">
 								</div>
 								<div class="footer__fh">
-									<picture><source srcset="img/logo-fh.webp" type="image/webp"><img src="img/logo-fh.png" alt="logo fh"></picture>
+									<picture><source srcset="img/logo-gr.webp" type="image/webp"><img src="img/logo-gr.png" alt="logo gr"></picture>
 								</div>
 							</div>
 							<div class="footer__menu">
 								<div class="footer__services">
 									<h4>services</h4>
 									<ul>
-										<li>Infographic Design</li>
+										<li>Pitch Deck Design</li>
 										<li>Interactive Presentations</li>
-										<li>Design Update</li>
+										<li>Animated Presentations</li>
 										<li>Template Design</li>
-										<li>3D Design</li>
+										<li>Infographic Design</li>
 										<li>Copywrite / Text Edit</li>
-										<li>Animation</li>
-										<li>Print-Ready</li>
+										<li>Print-Ready Presentations</li>
+										<li>3D & Web Design</li>
 									</ul>
 								</div>
 								<div class="footer__about">
-									<h4>about</h4>
+									<h4>Main</h4>
 									<ul>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Process</a></li>
+										<li><a href="#">Reviews</a></li>
+										<li><a href="#">Advantages</a></li>
 										<li><a href="#">Portfolio</a></li>
-										<li><a href="#">Customers reviews</a></li>
-										<li><a href="#">Briefing process</a></li>
-										<li><a href="#">Start my project</a></li>
+										<li><a href="#">Blog</a></li>
+										<li><a href="#">Services</a></li>
+										<li><a href="#">Contacts</a></li>
 									</ul>
 								</div>
 							</div>
@@ -620,10 +609,10 @@
 								<picture><source srcset="img/header/whatsap.webp" type="image/webp"><img src="img/header/whatsap.png" alt="whatsap"></picture>
 							</a>
 							<a href="#">
-								<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
+								<picture><source srcset="img/header/telegram.webp" type="image/webp"><img src="img/header/telegram.png" alt="telegram"></picture>
 							</a>
 							<a href="#">
-								<picture><source srcset="img/header/instagram.webp" type="image/webp"><img src="img/header/instagram.png" alt="instagram"></picture>
+								<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
 							</a>
 							<a href="#">
 								<picture><source srcset="img/header/mail.webp" type="image/webp"><img src="img/header/mail.png" alt="mail"></picture>
@@ -697,7 +686,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240730232434"></script>
+	<script src="js/app.min.js?_v=20250515163701"></script>
 </body>
 
 </html>

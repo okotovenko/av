@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240730232434">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250515163701">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
@@ -121,21 +121,16 @@
 										<picture><source srcset="img/header/whatsap.webp" type="image/webp"><img src="img/header/whatsap.png" alt="whatsap"></picture>
 									</a>
 									<a href="#">
-										<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
+										<picture><source srcset="img/header/telegram.webp" type="image/webp"><img src="img/header/telegram.png" alt="telegram"></picture>
 									</a>
 									<a href="#">
-										<picture><source srcset="img/header/instagram.webp" type="image/webp"><img src="img/header/instagram.png" alt="instagram"></picture>
+										<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
 									</a>
 									<a href="#">
 										<picture><source srcset="img/header/mail.webp" type="image/webp"><img src="img/header/mail.png" alt="mail"></picture>
 									</a>
 								</div>
 							</div>
-							<ul class="header__langflags">
-								<li class="header__langflags-active">
-									<picture><source srcset="img/header/flag-uk.webp" type="image/webp"><img src="img/header/flag-uk.png" alt="uk"></picture>
-								</li>
-							</ul>
 						</div>
 						<p class="header__copy">Copyright © 2024</p>
 					</nav>
@@ -152,20 +147,48 @@
 					<div class="hero__left">
 						<h1>powerful <br>
 							presentations <br>
-							<span>perfected</span>
+							<span class="hero__span">
+								<div class="animated-word" id="animated-word">perfected</div>
+							</span>
 						</h1>
-						<p><span>All-encompassing presentation services</span> are designed to elevate your content, captivate
-							your
-							audience, and leave
-							a&nbsp;lasting&nbsp;impression.</p>
+						<p>All-encompassing presentation services <br>
+							for consulting, marketing agencies and start-ups!</p>
+						<ul>
+							<li>
+								<a href="#">Pitch Deck Design</a>
+							</li>
+							<li>
+								<a href="#">Interactive Presentations</a>
+							</li>
+							<li>
+								<a href="#">Animated Presentations</a>
+							</li>
+							<li>
+								<a href="#">Template Design</a>
+							</li>
+							<li>
+								<a href="#">Infographic Design</a>
+							</li>
+							<li>
+								<a href="#">Copywrite & Text Edit</a>
+							</li>
+							<li>
+								<a href="#">Print-Ready Presentations</a>
+							</li>
+							<li>
+								<a href="#">3D Design & Web Design</a>
+							</li>
+						</ul>
 						<div class="hero__buttons">
-							<a href="#" data-popup="#popup-form" class="hero__consultation">free consultation</a>
-							<a href="#" data-popup="#popup-thanks" class="hero__portfolio">portfolio</a>
+							<a href="#" data-popup="#popup-form" class="hero__consultation button-black">free consultation</a>
+							<a href="#" data-popup="#popup-thanks" class="hero__portfolio button-orange">portfolio</a>
 						</div>
 					</div>
 					<div data-da=".hero__left, 767.98, 2" class="hero__right">
-						<div class="hero__video" data-popup="#popup-video" data-popup-youtube="S4BvRUzoeSg">
-							<iframe src="https://www.youtube.com/embed/S4BvRUzoeSg?si=vwbaCKs4C-32Xm6W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<!-- <div class="hero__video" data-popup="#popup-video" data-popup-youtube="S4BvRUzoeSg"> -->
+						<!-- <picture><source srcset="img/main-page/process/design.webp" type="image/webp"><img src="img/main-page/process/design.png" alt=""></picture> -->
+						<div class="hero__video">
+							<iframe src="https://www.youtube.com/embed/w7cMLbT9GW4?autoplay=1&mute=1&rel=0&playsinline=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -173,11 +196,11 @@
 			<section class="page__form form-hor">
 				<div class="form-hor__container">
 					<div class="form-hor__content">
-						<h2>URGENT PROJECT? <br>
+						<h2 class="subtitle">URGENT PROJECT? <br>
 							<span>CONTACT NOW!</span>
 						</h2>
-						<p>Fill out the form and I will give you <br>
-							the answer in less <span>than 15 minutes!</span>
+						<p>Fill out the form and I’ll answer
+							in a few minutes!</span>
 						</p>
 					</div>
 					<form action="files/sendmail/sendmail.php" data-dev enctype="multipart/form-data" class="form form-horizontal" method="POST">
@@ -188,7 +211,7 @@
 						<label class="form-label">
 							<input type="email" data-required name="email" id="email" autocomplete="off" maxlength="255" data-error="Error" placeholder="*E-MAIL" class="input">
 						</label>
-						<button type="submit" class="button">submit</button>
+						<button type="submit" class="button button-red">submit</button>
 					</form>
 				</div>
 			</section>
@@ -489,7 +512,7 @@
 			</section>
 			<section class="page__feedbacks feedbacks">
 				<div class="feedbacks__container">
-					<h2>customer’s <span>feedback</span></h2>
+					<h2 class="subtitle">customer’s <span>feedback</span></h2>
 					<div class="feedbacks__slider swiper">
 						<div class="feedbacks__wrapper swiper-wrapper">
 							<article class="feedbacks__item swiper-slide">
@@ -553,6 +576,28 @@
 									Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
 									tellus. </p>
 							</article>
+							<article class="feedbacks__item swiper-slide">
+								<div class="feedbacks__video" data-popup="#popup-video" data-popup-youtube="S4BvRUzoeSg">
+									<picture><source srcset="img/main-page/feedbacks/03.webp" type="image/webp"><img src="img/main-page/feedbacks/03.png" alt="img"></picture>
+								</div>
+								<div class="feedbacks__stars">
+									<picture><source srcset="img/main-page/feedbacks/stars.webp" type="image/webp"><img src="img/main-page/feedbacks/stars.png" alt="stars"></picture>
+								</div>
+								<h3>Alexandro Chotidis</h3>
+								<h4>Geschäftsstellenleiter, Ostfrisische</h4>
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+									dolor.
+									Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+									ridiculus
+									mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+									massa
+									quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
+									justo,
+									rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
+									pretium.
+									Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+									tellus. </p>
+							</article>
 						</div>
 						<button type="button" class="feedbacks-button-prev">
 							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
@@ -587,6 +632,29 @@
 								</div>
 								<div class="reviews__text">
 									<p>Artem is one of the most efficient and professional designers I have ever worked with.
+										Artem is one of the most efficient and professional designers I have ever worked with.
+										Artem is one of the most efficient and professional designers I have ever worked with.
+										Artem is one of the most efficient and professional designers I have ever worked with.
+										Artem is one of the most efficient and professional designers I have ever worked with.
+									</p>
+								</div>
+								<a href="#" class="reviews__more">More</a>
+							</li>
+							<li class="reviews__item">
+								<div class="reviews__date">
+									<div class="reviews__avatar">
+										<picture><source srcset="img/main-page/reviews/avatar.webp" type="image/webp"><img src="img/main-page/reviews/avatar.png" alt="avatar"></picture>
+									</div>
+									<div class="reviews__right">
+										<p>Stanislav Puzdriak</p>
+										<span>16.05.2024</span>
+									</div>
+								</div>
+								<div class="reviews__text">
+									<p>Artem is one of the most efficient and professional designers I have ever worked with.
+										Artem is one of the most efficient and professional designers I have ever worked with.
+										Artem is one of the most efficient and professional designers I have ever worked with.
+										Artem is one of the most efficient and professional designers I have ever worked with.
 										Artem is one of the most efficient and professional designers I have ever worked with.
 									</p>
 								</div>
@@ -772,23 +840,8 @@
 								</div>
 								<a href="#" class="reviews__more">More</a>
 							</li>
-							<li class="reviews__item">
-								<div class="reviews__date">
-									<div class="reviews__avatar">
-										<picture><source srcset="img/main-page/reviews/avatar.webp" type="image/webp"><img src="img/main-page/reviews/avatar.png" alt="avatar"></picture>
-									</div>
-									<div class="reviews__right">
-										<p>Stanislav Puzdriak</p>
-										<span>16.05.2024</span>
-									</div>
-								</div>
-								<div class="reviews__text">
-									<p>Artem is one of the most efficient and professional designers I have ever worked with.</p>
-								</div>
-								<a href="#" class="reviews__more">More</a>
-							</li>
 						</ul>
-						<button hidden data-showmore-button type="button" class="reviews__all block__more">
+						<button hidden data-showmore-button type="button" class="reviews__all block__more button-red">
 							<span>more feedbacks</span>
 							<span>more feedbacks</span>
 						</button>
@@ -797,7 +850,7 @@
 			</section>
 			<section class="page__portfolio portfolio">
 				<div class="portfolio__container">
-					<h2>portfolio</h2>
+					<h2 class="subtitle">portfolio</h2>
 					<p>Check my latest projects or choose style reference that you prefer for your presentation!</p>
 					<div data-showmore="items" class="portfolio__box">
 						<ul data-showmore-content="4" data-showmore-content-mobile="3" class="portfolio__items">
@@ -844,35 +897,176 @@
 								</a>
 							</li>
 						</ul>
-						<button hidden data-showmore-button type="button" class="portfolio__all block__more">
+						<button hidden data-showmore-button type="button" class="portfolio__all block__more button-red">
 							<span>more projects</span>
 							<span>more projects</span>
 						</button>
 					</div>
 				</div>
 			</section>
+			<!-- <section data-watch-threshold="0.9" id="services" class="page__services services">
+	<div class="services__container">
+		<h2 class="services__title"><span>full list</span> of services</h2>
+		<p>Are you ready to take your presentations to the next level? Look no further! All-encompassing
+			presentation
+			services are designed to elevate your content, captivate your audience, and leave a lasting
+			impression.</p>
+		<div class="services__slider swiper">
+			<div class="services-scrollbar"></div>
+			<div class="services__wrapper swiper-wrapper">
+				<div class="services__slide swiper-slide">
+					<div class="services__item">
+						<div class="services__content">
+							<div class="services__icon">
+								<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+							</div>
+							<h3>Design Update111</h3>
+							<p>Whether you're pitching to investors, training your team, or presenting at a
+								conference, I
+								specialize in crafting visually stunning and engaging presentations that leave a
+								lasting
+								impression!</p>
+						</div>
+						<div class="services__img">
+							<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+						</div>
+					</div>
+				</div>
+				<div class="services__slide swiper-slide">
+					<div class="services__item">
+						<div class="services__content">
+							<div class="services__icon">
+								<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+							</div>
+							<h3>Design Update222</h3>
+							<p>Whether you're pitching to investors, training your team, or presenting at a
+								conference, I
+								specialize in crafting visually stunning and engaging presentations that leave a
+								lasting
+								impression!</p>
+						</div>
+						<div class="services__img">
+							<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+						</div>
+					</div>
+				</div>
+				<div class="services__slide swiper-slide">
+					<div class="services__item">
+						<div class="services__content">
+							<div class="services__icon">
+								<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+							</div>
+							<h3>Design Updat333</h3>
+							<p>Whether you're pitching to investors, training your team, or presenting at a
+								conference, I
+								specialize in crafting visually stunning and engaging presentations that leave a
+								lasting
+								impression!</p>
+						</div>
+						<div class="services__img">
+							<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+						</div>
+					</div>
+				</div>
+				<div class="services__slide swiper-slide">
+					<div class="services__item">
+						<div class="services__content">
+							<div class="services__icon">
+								<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+							</div>
+							<h3>Design Update444</h3>
+							<p>Whether you're pitching to investors, training your team, or presenting at a
+								conference, I
+								specialize in crafting visually stunning and engaging presentations that leave a
+								lasting
+								impression!</p>
+						</div>
+						<div class="services__img">
+							<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+						</div>
+					</div>
+				</div>
+				<div class="services__slide swiper-slide">
+					<div class="services__item">
+						<div class="services__content">
+							<div class="services__icon">
+								<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+							</div>
+							<h3>Design Update555</h3>
+							<p>Whether you're pitching to investors, training your team, or presenting at a
+								conference, I
+								specialize in crafting visually stunning and engaging presentations that leave a
+								lasting
+								impression!</p>
+						</div>
+						<div class="services__img">
+							<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+						</div>
+					</div>
+				</div>
+				<div class="services__slide swiper-slide">
+					<div class="services__item">
+						<div class="services__content">
+							<div class="services__icon">
+								<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+							</div>
+							<h3>Design Update666</h3>
+							<p>Whether you're pitching to investors, training your team, or presenting at a
+								conference, I
+								specialize in crafting visually stunning and engaging presentations that leave a
+								lasting
+								impression!</p>
+						</div>
+						<div class="services__img">
+							<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+						</div>
+					</div>
+				</div>
+				<div class="services__slide swiper-slide">
+					<div class="services__item">
+						<div class="services__content">
+							<div class="services__icon">
+								<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+							</div>
+							<h3>Design Update777</h3>
+							<p>Whether you're pitching to investors, training your team, or presenting at a
+								conference, I
+								specialize in crafting visually stunning and engaging presentations that leave a
+								lasting
+								impression!</p>
+						</div>
+						<div class="services__img">
+							<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="services-button-prev">
+				<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
+			</button>
+			<button type="button" class="services-button-next">
+				<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
+			</button>
+		</div>
+	</div>
+</section> -->
 			<section data-watch-threshold="0.9" id="services" class="page__services services">
 				<div class="services__container">
-					<h2 class="services__title"><span>full list</span> of services</h2>
-					<p>Are you ready to take your presentations to the next level? Look no further! All-encompassing
-						presentation
-						services are designed to elevate your content, captivate your audience, and leave a lasting
-						impression.</p>
+					<h2 class="subtitle">services</h2>
+					<p>I offer 8 types of services that fully cover all needs in presentation development:</p>
 					<div class="services__slider swiper">
-						<div class="services-scrollbar"></div>
 						<div class="services__wrapper swiper-wrapper">
 							<div class="services__slide swiper-slide">
 								<div class="services__item">
 									<div class="services__content">
 										<div class="services__icon">
-											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+											<img src="img/main-page/services/01.svg" alt="Pitch Deck Design">
 										</div>
-										<h3>Design Update111</h3>
-										<p>Whether you're pitching to investors, training your team, or presenting at a
-											conference, I
-											specialize in crafting visually stunning and engaging presentations that leave a
-											lasting
-											impression!</p>
+										<h3>Pitch Deck Design</h3>
+										<p>Whether you're pitching to investors,<br> training your team, or presenting at <br>
+											a conference, I specialize in crafting visually <br> stunning and engaging pitch decks <br>
+											that leave a lasting impression!</p>
+										<a href="#" class="button-red">Check the page!</a>
 									</div>
 									<div class="services__img">
 										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
@@ -883,14 +1077,15 @@
 								<div class="services__item">
 									<div class="services__content">
 										<div class="services__icon">
-											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+											<img src="img/main-page/services/02.svg" alt="Animated Presentations">
 										</div>
-										<h3>Design Update222</h3>
-										<p>Whether you're pitching to investors, training your team, or presenting at a
-											conference, I
-											specialize in crafting visually stunning and engaging presentations that leave a
-											lasting
-											impression!</p>
+										<h3>Animated Presentations</h3>
+										<p>Transform your slides into captivating <br>
+											visual stories: high-quality transitions, <br> animated elements, musical <br> accompaniment -
+											will
+											not leave <br>
+											the audience on the sidelines.!</p>
+										<a href="#" class="button-red">Check the page!</a>
 									</div>
 									<div class="services__img">
 										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
@@ -901,14 +1096,14 @@
 								<div class="services__item">
 									<div class="services__content">
 										<div class="services__icon">
-											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+											<img src="img/main-page/services/03.svg" alt="Infographic Design">
 										</div>
-										<h3>Design Updat333</h3>
-										<p>Whether you're pitching to investors, training your team, or presenting at a
-											conference, I
-											specialize in crafting visually stunning and engaging presentations that leave a
-											lasting
-											impression!</p>
+										<h3>Infographic Design</h3>
+										<p>Graphs, tables, timelines, diagrams <br>
+											and many complex elements will look <br> much better and be easier to perceive <br>
+											by your audience thanks to the correct <br>
+											and high-quality infographic.</p>
+										<a href="#" class="button-red">Check the page!</a>
 									</div>
 									<div class="services__img">
 										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
@@ -919,14 +1114,14 @@
 								<div class="services__item">
 									<div class="services__content">
 										<div class="services__icon">
-											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+											<img src="img/main-page/services/04.svg" alt="Print-Ready Presentations">
 										</div>
-										<h3>Design Update444</h3>
-										<p>Whether you're pitching to investors, training your team, or presenting at a
-											conference, I
-											specialize in crafting visually stunning and engaging presentations that leave a
-											lasting
-											impression!</p>
+										<h3>Print-Ready Presentations</h3>
+										<p>If you plan to print a presentation, then <br>
+											I will do a complete pre-press preparation <br> of the presentation in the required format,<br>
+											in
+											compliance with all the rules for further <br> high-quality printing.</p>
+										<a href="#" class="button-red">Check the page!</a>
 									</div>
 									<div class="services__img">
 										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
@@ -937,14 +1132,13 @@
 								<div class="services__item">
 									<div class="services__content">
 										<div class="services__icon">
-											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+											<img src="img/main-page/services/05.svg" alt="Interactive Presentations">
 										</div>
-										<h3>Design Update555</h3>
-										<p>Whether you're pitching to investors, training your team, or presenting at a
-											conference, I
-											specialize in crafting visually stunning and engaging presentations that leave a
-											lasting
-											impression!</p>
+										<h3>Interactive Presentations</h3>
+										<p>Transitions between slides, the presence <br>
+											of interactive buttons, a navigation menu <br> and animation make the material lively <br>
+											and memorable. Ideal solution for pitches <br> and online presentations. </p>
+										<a href="#" class="button-red">Check the page!</a>
 									</div>
 									<div class="services__img">
 										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
@@ -955,14 +1149,14 @@
 								<div class="services__item">
 									<div class="services__content">
 										<div class="services__icon">
-											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+											<img src="img/main-page/services/06.svg" alt="Template Design">
 										</div>
-										<h3>Design Update666</h3>
-										<p>Whether you're pitching to investors, training your team, or presenting at a
-											conference, I
-											specialize in crafting visually stunning and engaging presentations that leave a
-											lasting
-											impression!</p>
+										<h3>Template Design</h3>
+										<p>Say “goodbye” to boring slideshows and <br> “hello” to success with meticulously crafted <br>
+											presentation
+											templates. I design templates <br>that empower you to deliver captivating <br> presentations
+											effortlessly, every time.</p>
+										<a href="#" class="button-red">Check the page!</a>
 									</div>
 									<div class="services__img">
 										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
@@ -973,14 +1167,32 @@
 								<div class="services__item">
 									<div class="services__content">
 										<div class="services__icon">
-											<picture><source srcset="img/main-page/services/icon-01.webp" type="image/webp"><img src="img/main-page/services/icon-01.png" alt="01"></picture>
+											<img src="img/main-page/services/07.svg" alt="Copywrite & Text Edit">
 										</div>
-										<h3>Design Update777</h3>
-										<p>Whether you're pitching to investors, training your team, or presenting at a
-											conference, I
-											specialize in crafting visually stunning and engaging presentations that leave a
-											lasting
-											impression!</p>
+										<h3>Copywrite & Text Edit</h3>
+										<p>An overabundance of information on <br>
+											a slide or the absence of key points <br> interferes with the correct perception of <br> the
+											presentation.
+											I will definitely edit, write <br> or collect data for your great presentation!</p>
+										<a href="#" class="button-red">Check the page!</a>
+									</div>
+									<div class="services__img">
+										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="services__slide swiper-slide">
+								<div class="services__item">
+									<div class="services__content">
+										<div class="services__icon">
+											<img src="img/main-page/services/08.svg" alt="3D & Web Design">
+										</div>
+										<h3>3D & Web Design</h3>
+										<p>3D design enhances presentations <br>
+											with realistic renders, animations, and <br> visualizations. Web design services include <br>
+											full-cycle
+											creation of custom websites <br> tailored to brand identity & business needs.</p>
+										<a href="#" class="button-red">Check the page!</a>
 									</div>
 									<div class="services__img">
 										<picture><source srcset="img/main-page/portfolio/front.webp" type="image/webp"><img src="img/main-page/portfolio/front.png" alt="img"></picture>
@@ -988,23 +1200,20 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="services-button-prev">
-							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
-						</button>
-						<button type="button" class="services-button-next">
-							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
-						</button>
+						<button type="button" class="services-button-prev _icon-play button-prev-slider"></button>
+						<button type="button" class="services-button-next _icon-play button-next-slider"></button>
 					</div>
+					<div class="swiper-pagination services__pagination"></div>
 				</div>
 			</section>
 			<section class="page__form form-hor">
 				<div class="form-hor__container">
 					<div class="form-hor__content">
-						<h2>URGENT PROJECT? <br>
+						<h2 class="subtitle">URGENT PROJECT? <br>
 							<span>CONTACT NOW!</span>
 						</h2>
-						<p>Fill out the form and I will give you <br>
-							the answer in less <span>than 15 minutes!</span>
+						<p>Fill out the form and I’ll answer
+							in a few minutes!</span>
 						</p>
 					</div>
 					<form action="files/sendmail/sendmail.php" data-dev enctype="multipart/form-data" class="form form-horizontal" method="POST">
@@ -1015,70 +1224,161 @@
 						<label class="form-label">
 							<input type="email" data-required name="email" id="email" autocomplete="off" maxlength="255" data-error="Error" placeholder="*E-MAIL" class="input">
 						</label>
-						<button type="submit" class="button">submit</button>
+						<button type="submit" class="button button-red">submit</button>
 					</form>
 				</div>
 			</section>
 			<section class="page__process process">
 				<div class="process__container">
-					<h2><span>EASY</span> BRIEFING PROCESS</h2>
-					<div class="process__slider swiper">
-						<!-- <div class="process-scrollbar"></div> -->
-						<div class="process__wrapper swiper-wrapper">
-							<article class="process__slide swiper-slide">
-								<span>Step #1</span>
-								<h3>Consultation</h3>
-								<p>We start by understanding your objectives, target audience,
-									and brand identity to create
-									a roadmap for your presentation.</p>
-							</article>
-							<article class="process__slide swiper-slide">
-								<span>Step #2</span>
-								<h3>Design</h3>
-								<p>I work with my magic, combining creativity with strategic thinking to bring your&nbsp;ideas
-									to
-									life
-									visually.</p>
-							</article>
-							<article class="process__slide swiper-slide">
-								<span>Step #3</span>
-								<h3>Feedback</h3>
-								<p>I value your input and provide multiple rounds of revisions
-									to ensure the final product exceeds your expectations.</p>
-							</article>
-							<article class="process__slide swiper-slide">
-								<span>Step #4</span>
-								<h3>Delivery</h3>
-								<p>Once approved, I deliver your presentation in the format of your choice, ready to impress
-									your
-									audience.</p>
-							</article>
-						</div>
-						<button type="button" class="process-button-prev">
-							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
-						</button>
-						<button type="button" class="process-button-next">
-							<picture><source srcset="img/arrow-slide.webp" type="image/webp"><img src="img/arrow-slide.png" alt="arrow"></picture>
-						</button>
-					</div>
+					<h2 class="subtitle">only 6 steps of working process</h2>
 					<div class="process__box">
-						<div class="process__decor"></div>
-						<div class="process__left">
-							<div class="process__top">
-								<p>your draft</p>
-								<div class="process__arrow"><img src="img/main-page/process/Arrow.svg" alt="arrow"></div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Consultation</h3>
+								<p>We target the main goals of the project, clarify the brief, figure out exact budget and deadlines.</p>
+								<span>Step #1</span>
 							</div>
-							<picture><source srcset="img/main-page/process/draft.webp" type="image/webp"><img src="img/main-page/process/draft.png" alt="draft"></picture>
+							<div class="process__icon">
+								<img src="img/main-page/process/01.svg" alt="Consultation">
+							</div>
 						</div>
-						<div class="process__right">
-							<p>my design</p>
-							<picture><source srcset="img/main-page/process/design.webp" type="image/webp"><img src="img/main-page/process/design.png" alt="design"></picture>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Test Slides</h3>
+								<p>I create 2-3 test slides for approval by style, colors
+									and overall composition.</p>
+								<span>Step #2</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/02.svg" alt="Test Slides">
+							</div>
+						</div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Feedback</h3>
+								<p>We include edits to the test design based on your comments until the style is fully approved.</p>
+								<span>Step #3</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/03.svg" alt="Feedback">
+							</div>
+						</div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Design</h3>
+								<p>I continue to work on the remaining slides according
+									to the previously approved style.</p>
+								<span>Step #4</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/04.svg" alt="Design">
+							</div>
+						</div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Feedback #2</h3>
+								<p>We include edits design based on your comments
+									until the pitch deck is fully approved.</p>
+								<span>Step #5</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/05.svg" alt="Feedback #2">
+							</div>
+						</div>
+						<div class="process__row">
+							<div class="process__item">
+								<h3>Delivery</h3>
+								<p>I ship all source files and additional graphics
+									of the project.</p>
+								<span>Step #6</span>
+							</div>
+							<div class="process__icon">
+								<img src="img/main-page/process/06.svg" alt="Delivery">
+							</div>
 						</div>
 					</div>
-					<a href="#" class="process__button">book a free consultation</a>
+					<a href="#" class="process__button button-red">book a free consultation</a>
 				</div>
 			</section>
-			<section class="why">
+			<section class="page__advantages advantages">
+				<div class="advantages__container">
+					<h2 class="subtitle">Advantages</h2>
+					<div class="advantages__slider swiper">
+						<div class="advantages__wrapper swiper-wrapper">
+							<div class="advantages__slide swiper-slide">
+								<div class="advantages__img">
+									<picture><source srcset="img/main-page/advantages/01.webp" type="image/webp"><img src="img/main-page/advantages/01.png" alt="img"></picture>
+								</div>
+								<h4>Free 3 waves of edits</h4>
+								<p>I provide 3 waves of free edits. This ensures that the outcome aligns perfectly with your
+									expectations. </p>
+							</div>
+							<div class="advantages__slide swiper-slide">
+								<div class="advantages__img">
+									<picture><source srcset="img/main-page/advantages/01.webp" type="image/webp"><img src="img/main-page/advantages/01.png" alt="img"></picture>
+								</div>
+								<h4>Free files shipping</h4>
+								<p>All source files, including images, fonts and additional graphics
+									will be send for the future independent edits and updates.</p>
+							</div>
+							<div class="advantages__slide swiper-slide">
+								<div class="advantages__img">
+									<picture><source srcset="img/main-page/advantages/01.webp" type="image/webp"><img src="img/main-page/advantages/01.png" alt="img"></picture>
+								</div>
+								<h4>Free audit</h4>
+								<p>I analyze, show and give
+									exact recommendations
+									about improving your
+									current pitch deck.</p>
+							</div>
+							<div class="advantages__slide swiper-slide">
+								<div class="advantages__img">
+									<picture><source srcset="img/main-page/advantages/01.webp" type="image/webp"><img src="img/main-page/advantages/01.png" alt="img"></picture>
+								</div>
+								<h4>Free consultation</h4>
+								<p>I will answer all your questions according presentation design so the further cooperation will be as
+									comfortable as possible.</p>
+							</div>
+							<div class="advantages__slide swiper-slide">
+								<div class="advantages__img">
+									<picture><source srcset="img/main-page/advantages/01.webp" type="image/webp"><img src="img/main-page/advantages/01.png" alt="img"></picture>
+								</div>
+								<h4>Saving your team valuable time</h4>
+								<p>Your consultants focus
+									on content and delivery —
+									I handle the visual execution, ensuring polish without disrupting workflow.</p>
+							</div>
+							<div class="advantages__slide swiper-slide">
+								<div class="advantages__img">
+									<picture><source srcset="img/main-page/advantages/01.webp" type="image/webp"><img src="img/main-page/advantages/01.png" alt="img"></picture>
+								</div>
+								<h4>Design aligned with business outcomes</h4>
+								<p>Every slide is crafted with purpose: to persuade clients,
+									win pitches, present strategies, or defend high-stakes initiatives.</p>
+							</div>
+							<div class="advantages__slide swiper-slide">
+								<div class="advantages__img">
+									<picture><source srcset="img/main-page/advantages/01.webp" type="image/webp"><img src="img/main-page/advantages/01.png" alt="img"></picture>
+								</div>
+								<h4>Enhancing expertise through visuals</h4>
+								<p>I transform complex data and strategic insights into clear, compelling slides — amplifying your
+									message and reinforcing your authority.</p>
+							</div>
+							<div class="advantages__slide swiper-slide">
+								<div class="advantages__img">
+									<picture><source srcset="img/main-page/advantages/01.webp" type="image/webp"><img src="img/main-page/advantages/01.png" alt="img"></picture>
+								</div>
+								<h4>Flexible formats for every business need</h4>
+								<p>From client decks and internal workshops to executive reports and keynote presentations —
+									I tailor visuals to the context, audience, and goal.</p>
+							</div>
+						</div>
+						<button type="button" class="advantages-button-prev _icon-play button-prev-slider"></button>
+						<button type="button" class="advantages-button-next _icon-play button-next-slider"></button>
+					</div>
+				</div>
+			</section>
+			<!-- <section class="why">
 				<div class="why__container">
 					<h2>WHY PRESENTATIONS FAIL?</h2>
 					<p>Creation of impressive presentation can be challenging</p>
@@ -1105,10 +1405,10 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<section class="page__musings musings">
 				<div class="musings__container">
-					<h2><span>Fresh</span> musings</h2>
+					<h2 class="subtitle"><span>Fresh</span> musings</h2>
 					<div class="musings__box">
 						<div class="musings__left">
 							<article class="musings__big">
@@ -1219,7 +1519,7 @@
 							</article>
 						</div>
 					</div>
-					<a href="#" class="musings__more">more articles</a>
+					<a href="#" class="musings__more button-red">more articles</a>
 				</div>
 			</section>
 			<section class="page__faq faq">
@@ -1285,7 +1585,7 @@
 							<label class="form-label">
 								<input type="email" data-required name="email" id="email-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="*E-MAIL" class="input">
 							</label>
-							<button type="submit" class="button">send an application</button>
+							<button type="submit" class="button button-red">send an application</button>
 						</form>
 					</div>
 					<div class="footer__right">
@@ -1295,30 +1595,34 @@
 									<img src="img/logo-color.svg" alt="logo">
 								</div>
 								<div class="footer__fh">
-									<picture><source srcset="img/logo-fh.webp" type="image/webp"><img src="img/logo-fh.png" alt="logo fh"></picture>
+									<picture><source srcset="img/logo-gr.webp" type="image/webp"><img src="img/logo-gr.png" alt="logo gr"></picture>
 								</div>
 							</div>
 							<div class="footer__menu">
 								<div class="footer__services">
 									<h4>services</h4>
 									<ul>
-										<li>Infographic Design</li>
+										<li>Pitch Deck Design</li>
 										<li>Interactive Presentations</li>
-										<li>Design Update</li>
+										<li>Animated Presentations</li>
 										<li>Template Design</li>
-										<li>3D Design</li>
+										<li>Infographic Design</li>
 										<li>Copywrite / Text Edit</li>
-										<li>Animation</li>
-										<li>Print-Ready</li>
+										<li>Print-Ready Presentations</li>
+										<li>3D & Web Design</li>
 									</ul>
 								</div>
 								<div class="footer__about">
-									<h4>about</h4>
+									<h4>Main</h4>
 									<ul>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Process</a></li>
+										<li><a href="#">Reviews</a></li>
+										<li><a href="#">Advantages</a></li>
 										<li><a href="#">Portfolio</a></li>
-										<li><a href="#">Customers reviews</a></li>
-										<li><a href="#">Briefing process</a></li>
-										<li><a href="#">Start my project</a></li>
+										<li><a href="#">Blog</a></li>
+										<li><a href="#">Services</a></li>
+										<li><a href="#">Contacts</a></li>
 									</ul>
 								</div>
 							</div>
@@ -1328,10 +1632,10 @@
 								<picture><source srcset="img/header/whatsap.webp" type="image/webp"><img src="img/header/whatsap.png" alt="whatsap"></picture>
 							</a>
 							<a href="#">
-								<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
+								<picture><source srcset="img/header/telegram.webp" type="image/webp"><img src="img/header/telegram.png" alt="telegram"></picture>
 							</a>
 							<a href="#">
-								<picture><source srcset="img/header/instagram.webp" type="image/webp"><img src="img/header/instagram.png" alt="instagram"></picture>
+								<picture><source srcset="img/header/linkedin.webp" type="image/webp"><img src="img/header/linkedin.png" alt="linkedin"></picture>
 							</a>
 							<a href="#">
 								<picture><source srcset="img/header/mail.webp" type="image/webp"><img src="img/header/mail.png" alt="mail"></picture>
@@ -1405,7 +1709,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240730232434"></script>
+	<script src="js/app.min.js?_v=20250515163701"></script>
 </body>
 
 </html>
